@@ -1,3 +1,5 @@
+'use client';
+
 import { FaLocationArrow } from 'react-icons/fa6';
 import MagicButton from './ui/MagicButton';
 import { Spotlight } from './ui/Spotlight';
@@ -5,7 +7,7 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect';
 
 const Hero = () => {
   return (
-    <div className='pb-20 pt-36'>
+    <div className='pt-36'>
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -60,7 +62,28 @@ const Hero = () => {
             Prague who brings ideas to life with code ✨
           </p>
 
-          <a href='#about'>
+          <a
+            href='#projects'
+            onClick={e => {
+              e.preventDefault();
+              // First scroll to top, then to projects section
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+              });
+              setTimeout(() => {
+                const targetElement = document.getElementById('projects');
+                if (targetElement) {
+                  const offset = 80;
+                  const targetPosition = targetElement.offsetTop - offset;
+                  window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth',
+                  });
+                }
+              }, 100);
+            }}
+          >
             <MagicButton
               title='Show my work'
               icon={<FaLocationArrow />}
