@@ -2,8 +2,10 @@ import { FaLocationArrow } from 'react-icons/fa6';
 
 import { socialMedia } from '@/data';
 import MagicButton from './ui/MagicButton';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
+    const { t } = useLanguage();
     return (
         <footer className='w-full pt-20 pb-10' id='contact'>
             {/* background grid */}
@@ -16,20 +18,19 @@ const Footer = () => {
             </div>
 
             <div className='flex flex-col items-center'>
-                <h1 className='heading lg:max-w-[45vw]'>
-                    Looking for a{' '}
-                    <span className='text-purple'>motivated developer</span> to
-                    join your team?
-                </h1>
-                <p className='text-white-200 md:mt-10 my-5 text-center'>
-                    I’m always open to new opportunities where I can learn,
-                    grow, and contribute with my skills. <br />
-                    If my profile caught your attention, I’d be glad to discuss
-                    how I can bring value to your company.
-                </p>
+                <h1
+                    className='heading lg:max-w-[45vw]'
+                    dangerouslySetInnerHTML={{ __html: t('footer.title') }}
+                />
+                <p
+                    className='text-white-200 md:mt-10 my-5 text-center'
+                    dangerouslySetInnerHTML={{
+                        __html: t('footer.description'),
+                    }}
+                />
                 <a href='mailto:andrej@meliska.sk'>
                     <MagicButton
-                        title='Get in touch with me'
+                        title={t('footer.button')}
                         icon={<FaLocationArrow />}
                         position='right'
                     />

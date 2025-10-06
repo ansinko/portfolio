@@ -9,8 +9,10 @@ const SchoolWork = () => {
 
     return (
         <div className='py-20' id='projects'>
-            {/* School Work Section */}
-            <h1 className='heading'>{t('schoolWork.title')}</h1>
+            <h1
+                className='heading'
+                dangerouslySetInnerHTML={{ __html: t('schoolWork.title') }}
+            />
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-4'>
                 {schoolWork.map(item => (
                     <ProjectCard

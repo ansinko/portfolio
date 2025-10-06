@@ -37,9 +37,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         ) as Language;
         if (
             savedLanguage &&
-            (savedLanguage === 'en' ||
-                savedLanguage === 'cs' ||
-                savedLanguage === 'sk')
+            (savedLanguage === 'en' || savedLanguage === 'sk')
         ) {
             setLanguageState(savedLanguage);
         }

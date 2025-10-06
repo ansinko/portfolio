@@ -8,7 +8,12 @@ const ProgrammingLanguages = () => {
 
     return (
         <div className='py-20' id='skills'>
-            <h2 className='heading'>{t('programmingLanguages.title')}</h2>
+            <h2
+                className='heading'
+                dangerouslySetInnerHTML={{
+                    __html: t('programmingLanguages.title'),
+                }}
+            />
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-4'>
                 {programmingLanguages.map((lang, index) => (
                     <div

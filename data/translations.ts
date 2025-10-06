@@ -1,22 +1,60 @@
 export const translations = {
     en: {
+        generic: {
+            present: 'present',
+        },
         hero: {
             title: 'Andrej Meliška - Software Developer',
             subtitle: 'Bc. by paper, Dev. by passion',
             description:
                 'Software developer, sports enthusiast and student @ FIT CTU in Prague who brings ideas to life with code ✨',
-            button: 'Show my work',
+            button: 'My projects',
         },
         navigation: {
             about: 'About',
             projects: 'Projects',
             skills: 'Skills',
+            contact: 'Contact me',
+        },
+        about: {
+            softSkills: {
+                name: 'Soft skills',
+                description:
+                    'I am a team player who likes challenges, is down to earth with a good sense of humour, communicates clearly, thinks critically, comes up with new ideas, and always finishes and delivers work on time',
+            },
+            workExperience: {
+                header: 'Work experience',
+                position: 'Junior Software Developer',
+            },
+            education: {
+                header: 'Education',
+                name: 'Czech Technical University in Prague',
+                field: 'Web Engineering',
+            },
+            techStack: {
+                header: 'My tech stack',
+                description: 'I constantly try to improve',
+            },
+            likes: {
+                header: 'Do you like what you see so far?',
+                description: 'Show some love',
+                button: 'Give it a like',
+                thankYou: 'Thank You!',
+            },
+            domain: {
+                description:
+                    'I love automating workflows and building scripts in Python and Node.js to boost productivity and eliminate repetitive manual tasks.',
+            },
+            linkedin: {
+                title: 'Connect with me on LinkedIn',
+                visit: 'Visit my LinkedIn →',
+            },
         },
         schoolWork: {
-            title: 'My School and Work Projects',
+            title: 'My <span class="text-purple">School</span> and <span class="text-purple">Work</span> Projects',
         },
         programmingLanguages: {
-            title: 'Programming Languages & Skills',
+            title: '<span class="text-purple">Programming Languages</span> and Skills',
             experience: 'Experience',
         },
         grid: {
@@ -29,20 +67,11 @@ export const translations = {
             },
             linkedin: {
                 title: 'Connect with me on LinkedIn',
-                description:
-                    'Team player • Problem solver • Quick learner • Communication skills',
             },
             techStack: {
                 title: 'Tech stack',
                 description:
                     'I constantly try to improve myself one problem at a time',
-            },
-            education: {
-                title: 'Tech enthusiast with a passion for development.',
-                description: 'Find out more on my linkedIn',
-                bachelor: 'Bachelor of Computer Science',
-                university: 'Czech Technical University in Prague',
-                year: '2023 - 2026',
             },
             experience: {
                 title: 'Work Experience',
@@ -60,105 +89,74 @@ export const translations = {
             title: 'A small selection of recent projects',
         },
         programmingLanguagesSection: {
-            javascript: 'JavaScript',
-            typescript: 'TypeScript',
-            python: 'Python',
-            java: 'Java',
-            cpp: 'C++',
-            sql: 'SQL',
             years: 'years',
             projects: 'projects',
         },
-    },
-    cs: {
-        hero: {
-            title: 'Andrej Meliška - Vývojář softwaru',
-            subtitle: 'Bc. na papíře, Dev. z vášně',
-            description:
-                'Vývojář softwaru, sportovní nadšenec a student @ FIT ČVUT v Praze, který přivádí nápady k životu pomocí kódu ✨',
-            button: 'Ukázat moji práci',
-        },
-        navigation: {
-            about: 'O mně',
-            projects: 'Projekty',
-            skills: 'Dovednosti',
-        },
-        schoolWork: {
-            title: 'Moje školní práce a akademické projekty',
-        },
-        programmingLanguages: {
-            title: 'Programovací jazyky a zručnosti',
-            experience: 'Zkušenosti',
-        },
-        grid: {
-            about: {
-                title: 'O mně',
-                description:
-                    'Zde najdete více informací o mně, co dělám a mé současné dovednosti hlavně v oblasti programování a technologie',
-                experience: '1+',
-                projects: '20+',
-            },
-            linkedin: {
-                title: 'Spojte se se mnou na LinkedIn',
-                description:
-                    'Týmový hráč • Řešitel problémů • Rychlý student • Komunikační dovednosti',
-            },
-            techStack: {
-                title: 'Technologický stack',
-                description:
-                    'Neustále se snažím zlepšovat jeden problém za druhým',
-            },
-            education: {
-                title: 'Technologický nadšenec s vášní pro vývoj.',
-                description: 'Zjistěte více na mém LinkedIn',
-                bachelor: 'Bakalář počítačové vědy',
-                university: 'České vysoké učení technické v Praze',
-                year: '2023 - 2026',
-            },
-            experience: {
-                title: 'Pracovní zkušenosti',
-                description:
-                    'Získal jsem cenné zkušenosti prostřednictvím praktických projektů',
-            },
-            like: {
-                title: 'Líbí se vám to, co zatím vidíte?',
-                description: 'Prokažte lásku',
-                button: 'Dejte to lajk',
-                thankYou: 'Děkuji!',
-            },
-        },
-        projects: {
-            title: 'Malý výběr nedávných projektů',
-        },
-        programmingLanguagesSection: {
-            javascript: 'JavaScript',
-            typescript: 'TypeScript',
-            python: 'Python',
-            java: 'Java',
-            cpp: 'C++',
-            sql: 'SQL',
-            years: 'let',
-            projects: 'projektů',
+        footer: {
+            title: "Looking for a <span class='text-purple'>motivated developer</span> to join your team?",
+            description: `I’m always open to new opportunities where I can learn,
+                    grow, and contribute with my skills. <br />
+                    If my profile caught your attention, I’d be glad to discuss
+                    how I can bring value to your company.`,
+            button: 'Get in touch with me',
         },
     },
     sk: {
+        generic: {
+            present: 'súčasnosť',
+        },
         hero: {
             title: 'Andrej Meliška - Softvérový vývojár',
             subtitle: 'Bc. na papieri, Dev. z vášne',
             description:
                 'Softvérový vývojár, športový nadšenec a študent @ FIT ČVUT v Prahe, ktorý privádza nápady k životu pomocou kódu ✨',
-            button: 'Ukáž moju prácu',
+            button: 'Moje projekty',
         },
         navigation: {
             about: 'O mne',
             projects: 'Projekty',
             skills: 'Zručnosti',
+            contact: 'Kontaktuj ma',
+        },
+        about: {
+            softSkills: {
+                name: 'Soft skills',
+                description:
+                    'Som tímový hráč, ktorý má rád výzvy, je nohami pevne na zemi, má dobrý zmysel pre humor, komunikuje jasne, kriticky premýšľa, prichádza s novými nápadmi a vždy dokončí a odovzdá prácu načas.',
+            },
+            workExperience: {
+                header: 'Pracovné skúsenosti',
+                position: 'Junior softvérový vývojár',
+            },
+            education: {
+                header: 'Vzdelanie',
+                name: 'České vysoké učenie technické v Prahe',
+                field: 'Webové inžinierstvo',
+            },
+            techStack: {
+                header: 'Môj technologický stack',
+                description: 'Neustále sa snažím zlepšovať',
+            },
+            likes: {
+                header: 'Páči sa vám, čo zatiaľ vidíte?',
+                description: 'Prejavte lásku',
+                button: 'Dajte like',
+                thankYou: 'Ďakujem!',
+            },
+            domain: {
+                description:
+                    'Rád automatizujem pracovné postupy a vytváram skripty v Pythone a Node.js na zvýšenie produktivity a odstránenie opakovaných manuálnych úloh.',
+            },
+            linkedin: {
+                title: 'Spojte sa so mnou na LinkedIne',
+                visit: 'Navštívte môj LinkedIn →',
+            },
         },
         schoolWork: {
-            title: 'Moje školské práce a akademické projekty',
+            title: 'Moje <span class="text-purple">Školské</span> a <span class="text-purple">Pracovné</span> Projekty',
         },
         programmingLanguages: {
-            title: 'Programovacie jazyky a zručnosti',
+            title: '<span class="text-purple">Programovacie jazyky</span> a zručnosti',
             experience: 'Skúsenosti',
         },
         grid: {
@@ -210,6 +208,14 @@ export const translations = {
             sql: 'SQL',
             years: 'rokov',
             projects: 'projektov',
+        },
+        footer: {
+            title: "Hľadáte <span class='text-purple'>motivovaného vývojára</span> do svojho tímu?",
+            description: `Som vždy otvorený novým príležitostiam, kde sa môžem učiť,
+                    rásť a prispievať svojimi schopnosťami. <br />
+                    Ak vás môj profil zaujal, rád sa s vami spojím a porozprávame sa,
+                    ako môžem priniesť hodnotu vašej spoločnosti.`,
+            button: 'Kontaktujte ma',
         },
     },
 };

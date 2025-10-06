@@ -20,13 +20,20 @@ export const getNavItems = (t: (key: string) => string) => [
             <FaGraduationCap className='h-4 w-4 text-neutral-500 dark:text-white' />
         ),
     },
+    {
+        name: t('navigation.contact'),
+        link: '#contact',
+        icon: (
+            <FaGraduationCap className='h-4 w-4 text-neutral-500 dark:text-white' />
+        ),
+    },
 ];
 
-export const gridItems = [
+export const gridItems = (t: (key: string) => string) => [
     {
         id: 1,
-        title: 'I am a team player who likes challenges, is down to earth with a good sense of humour, communicates clearly, thinks critically, comes up with new ideas, and always finishes and delivers work on time',
-        description: 'Soft skills',
+        title: t('about.softSkills.description'),
+        description: t('about.softSkills.name'),
         className: 'lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]',
         imgClassName: 'w-full h-full',
         titleClassName: 'justify-end',
@@ -36,7 +43,7 @@ export const gridItems = [
     {
         id: 2,
         title: '',
-        description: 'Work experience',
+        description: t('about.workExperience.header'),
         className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
         imgClassName: '',
         titleClassName: 'justify-start',
@@ -45,8 +52,8 @@ export const gridItems = [
     },
     {
         id: 3,
-        title: 'My tech stack',
-        description: 'I constantly try to improve',
+        title: t('about.techStack.header'),
+        description: t('about.techStack.description'),
         className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
         imgClassName: '',
         titleClassName: 'justify-center',
@@ -56,7 +63,7 @@ export const gridItems = [
     {
         id: 4,
         title: '',
-        description: 'Education',
+        description: t('about.education.header'),
         className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
         imgClassName: '',
         titleClassName: 'justify-start',
@@ -66,7 +73,7 @@ export const gridItems = [
 
     {
         id: 5,
-        title: 'I love automating workflows and building scripts in Python and Node.js to boost productivity and eliminate repetitive manual tasks.',
+        title: t('about.domain.description'),
         description: '',
         className: 'md:col-span-3 md:row-span-1',
         imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60',
@@ -76,8 +83,8 @@ export const gridItems = [
     },
     {
         id: 6,
-        title: 'Do you like what you see so far?',
-        description: 'Show some love',
+        title: t('about.likes.header'),
+        description: t('about.likes.description'),
         className: 'lg:col-span-3 md:col-span-3 md:row-span-1',
         imgClassName: '',
         titleClassName: 'justify-center md:max-w-full max-w-60 text-center',
@@ -86,7 +93,7 @@ export const gridItems = [
     },
     {
         id: 7,
-        title: 'Tech enthusiast with a passion for development',
+        title: t('about.linkedin.title'),
         description: '',
         className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
         imgClassName: '',
@@ -100,131 +107,6 @@ export const gridItems = [
 export const schoolWork = [
     {
         id: 1,
-        title: 'Moderné dátové formáty v praxi',
-        des: 'Projekt v rámci predmetu BI-MDF zameraný na modelovanie dát a ich reprezentáciu v rôznych formátoch (RDF, SPARQL, JSON, CSV, XML), vrátane dotazovania a transformácií.',
-        iconLists: [
-            '/icons/html5/html5-original.svg',
-            'xml.png',
-            'csv.png',
-            '/icons/json/json-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/modern-data-formats',
-        category: 'BI-MDF',
-        year: '2022',
-        img: 'school-projects/json-code-example.png',
-    },
-    {
-        id: 2,
-        title: 'Big Data Analytika',
-        des: 'Semestrálna práca zameraná na spracovanie a analýzu Big Data s využitím MongoDB, Elasticsearch a Kibany. Na vybraných datasetoch som skúmal prepojenia a korelácie, ktoré som vizualizoval v Kibane.',
-        iconLists: [
-            '/icons/python/python-original.svg',
-            '/icons/mongodb/mongodb-original.svg',
-            '/icons/elasticsearch/elasticsearch-original.svg',
-            '/icons/kibana/kibana-original.svg',
-            '/icons/json/json-original.svg',
-            '/icons/docker/docker-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/big-data',
-        category: 'BI-BIG',
-        year: '2024',
-        img: 'school-projects/bigdata-overview.png',
-    },
-    {
-        id: 3,
-        title: 'Stránka o mne',
-        des: 'Stránka o mne z predmetu BI-ZWU, kde som sa naučil základné koncepty návrhu webového rozhrania z pohľadu používateľa a osvojil si HTML a CSS.',
-        iconLists: [
-            '/icons/html5/html5-original.svg',
-            '/icons/css3/css3-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/my-first-web',
-        category: 'BI-ZWU',
-        year: '2023',
-        img: 'school-projects/about-me-web.png',
-        demo: 'https://andrej.meliska.sk/',
-    },
-    {
-        id: 4,
-        title: 'The Drake',
-        des: 'Implementácia stolnej hry The Drake (inšpirovanej hrou The Duke) pre dvoch hráčov v Jave. Zjednodušená verzia s menším hracím plánom a prispôsobenými pravidlami.',
-        iconLists: [
-            '/icons/java/java-original.svg',
-            '/icons/git/git-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/java-drake-game',
-        category: 'BI-PJV',
-        year: '2023',
-        img: 'school-projects/drake.png',
-    },
-    {
-        id: 5,
-        title: 'PHP projekty',
-        des: 'Súbor PHP projektov, na ktorých som si prakticky vyskúšal OOP, Composer, REST API, ORM, perzistenciu dát, scraping a unit testing.',
-        iconLists: [
-            '/icons/php/php-original.svg',
-            '/icons/symfony/symfony-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/php',
-        category: 'BI-PHP',
-        year: '2024',
-        img: 'school-projects/php.png',
-    },
-    {
-        id: 6,
-        title: 'Aplikácia na odporúčanie relevantných produktov',
-        des: 'Webová aplikácia odporúčajúca produkty používateľovi na základe kolaboratívneho filtrovania a podobnosti s inými používateľmi.',
-        iconLists: [
-            '/icons/php/php-original.svg',
-            '/icons/symfony/symfony-original.svg',
-            '/icons/postgresql/postgresql-original.svg',
-            'icons/javascript/javascript-original.svg',
-            '/icons/react/react-original.svg',
-            '/icons/docker/docker-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/product-recommendation-app',
-        category: 'BI-VWM',
-        year: '2023',
-        img: 'school-projects/recommendation-app.png',
-    },
-    {
-        id: 7,
-        title: 'Goodgame Empire Mini',
-        des: 'Strategická budovateľská hra v C++, kde hráč súťaží proti AI. Cieľom je získať čo najviac budov alebo zdrojov.',
-        iconLists: [
-            '/icons/cplusplus/cplusplus-original.svg',
-            '/icons/c/c-original.svg',
-            '/icons/cmake/cmake-original.svg',
-            '/icons/clion/clion-original.svg',
-            '/icons/git/git-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/goodgame-empire-mini',
-        category: 'BI-PA2',
-        year: '2023',
-        img: 'school-projects/goodgame-empire-mini.png',
-    },
-    {
-        id: 8,
-        title: 'C++ projekty',
-        des: 'Repozitár obsahujúci všetky moje C++ kódy – od domácich úloh z ProgTestu až po prípravu na skúšky.',
-        iconLists: ['/icons/cplusplus/cplusplus-original.svg'],
-        link: 'https://github.com/fit-school-projects/Cpp',
-        category: 'BI-PA2',
-        year: '2023',
-        img: 'school-projects/cpp.png',
-    },
-    {
-        id: 9,
-        title: 'C projekty',
-        des: 'Repozitár s mojimi C kódmi – od domácich úloh z ProgTestu až po menšie programy, ktoré mi pomohli osvojiť si základy programovania.',
-        iconLists: ['/icons/c/c-original.svg'],
-        link: 'https://github.com/fit-school-projects/C',
-        category: 'BI-PA1',
-        year: '2021',
-        img: 'school-projects/c.png',
-    },
-    {
-        id: 10,
         title: 'Rezervačný systém učební',
         des: 'Rezervačný systém učební implementovaný v PHP s dôrazom na správu miestností a rezervácií.',
         iconLists: [
@@ -241,15 +123,177 @@ export const schoolWork = [
         year: '2023',
         img: 'school-projects/reservations-app.png',
     },
+    {
+        id: 2,
+        title: 'Analýza a dekompozícia monolitického informačného systému',
+        des: `V tejto bakalárskej práci je analyzovaný monolitický informačný systém s 
+                modulárnou biznis logikou za účelom výberu vhodného modulu na dekompozíciu
+                a jeho transformáciu na samostatne nasaditeľný modul. Následne je tento modul 
+                oddelený, prepracovaný do podoby samostatnej mikroslužby a integrovaný
+                späť do pôvodného systému prostredníctvom architektonického štýlu REST.
+                Pri komunikácii s používateľským rozhraním je overenie používateľa zabezpečené 
+                pomocou JWT. Výsledkom práce je plne funkčná a nasaditeľná mikroslužba eDokumenty. 
+                Prínosom práce je zvýšenie flexibility, škálovateľnosti
+                a rozšíriteľnosti informačného systému, pričom práca zároveň vytvára základ
+                pre budúcu dekompozíciu ďalších modulov systému.`,
+        iconLists: [
+            '/icons/angular/angular-original.svg',
+            '/icons/java/java-original.svg',
+            'liquibase.svg',
+        ],
+        category: 'innovis',
+        year: '2025',
+        img: 'school-projects/dependencyOverviewDiagram.png',
+    },
+    {
+        id: 3,
+        title: 'Nástroj na generovanie závislostí v Java projekte',
+        des: `This tool analyzes the source code of a Java project, identifies dependencies for each class, and generates a list in Mermaid format for visualization.`,
+        iconLists: [
+            '/icons/python/python-original.svg',
+            '/icons/java/java-original.svg',
+            'Mermaid.svg',
+        ],
+        link: 'https://github.com/ansinko/java_dependency_gen_tool',
+        category: 'innovis',
+        year: '2025',
+        img: 'school-projects/edocumentsDepDiagramExample.png',
+    },
+    {
+        id: 4,
+        title: 'Moderné dátové formáty v praxi',
+        des: 'Projekt v rámci predmetu BI-MDF zameraný na modelovanie dát a ich reprezentáciu v rôznych formátoch (RDF, SPARQL, JSON, CSV, XML), vrátane dotazovania a transformácií.',
+        iconLists: [
+            '/icons/html5/html5-original.svg',
+            'csv-svgrepo-com.svg',
+            'xml-svgrepo-com.svg',
+            '/icons/json/json-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/modern-data-formats',
+        category: 'BI-MDF',
+        year: '2022',
+        img: 'school-projects/json-code-example.png',
+    },
+    {
+        id: 5,
+        title: 'Big Data Analytika',
+        des: 'Semestrálna práca zameraná na spracovanie a analýzu Big Data s využitím MongoDB, Elasticsearch a Kibany. Na vybraných datasetoch som skúmal prepojenia a korelácie, ktoré som vizualizoval v Kibane.',
+        iconLists: [
+            '/icons/python/python-original.svg',
+            '/icons/mongodb/mongodb-original.svg',
+            '/icons/elasticsearch/elasticsearch-original.svg',
+            '/icons/kibana/kibana-original.svg',
+            '/icons/json/json-original.svg',
+            '/icons/docker/docker-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/big-data',
+        category: 'BI-BIG',
+        year: '2024',
+        img: 'school-projects/bigdata-overview.png',
+    },
+    {
+        id: 6,
+        title: 'Stránka o mne',
+        des: 'Stránka o mne z predmetu BI-ZWU, kde som sa naučil základné koncepty návrhu webového rozhrania z pohľadu používateľa a osvojil si HTML a CSS.',
+        iconLists: [
+            '/icons/html5/html5-original.svg',
+            '/icons/css3/css3-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/my-first-web',
+        category: 'BI-ZWU',
+        year: '2023',
+        img: 'school-projects/about-me-web.png',
+        demo: 'https://andrej.meliska.sk/',
+    },
+    {
+        id: 7,
+        title: 'The Drake',
+        des: 'Implementácia stolnej hry The Drake (inšpirovanej hrou The Duke) pre dvoch hráčov v Jave. Zjednodušená verzia s menším hracím plánom a prispôsobenými pravidlami.',
+        iconLists: [
+            '/icons/java/java-original.svg',
+            '/icons/git/git-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/java-drake-game',
+        category: 'BI-PJV',
+        year: '2023',
+        img: 'school-projects/drake.png',
+    },
+    {
+        id: 8,
+        title: 'PHP projekty',
+        des: 'Súbor PHP projektov, na ktorých som si prakticky vyskúšal OOP, Composer, REST API, ORM, perzistenciu dát, scraping a unit testing.',
+        iconLists: [
+            '/icons/php/php-original.svg',
+            '/icons/symfony/symfony-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/php',
+        category: 'BI-PHP',
+        year: '2024',
+        img: 'school-projects/php.png',
+    },
+    {
+        id: 9,
+        title: 'Aplikácia na odporúčanie relevantných produktov',
+        des: 'Webová aplikácia odporúčajúca produkty používateľovi na základe kolaboratívneho filtrovania a podobnosti s inými používateľmi.',
+        iconLists: [
+            '/icons/php/php-original.svg',
+            '/icons/symfony/symfony-original.svg',
+            '/icons/postgresql/postgresql-original.svg',
+            'icons/javascript/javascript-original.svg',
+            '/icons/react/react-original.svg',
+            '/icons/docker/docker-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/product-recommendation-app',
+        category: 'BI-VWM',
+        year: '2023',
+        img: 'school-projects/recommendation-app.png',
+    },
+    {
+        id: 10,
+        title: 'Goodgame Empire Mini',
+        des: 'Strategická budovateľská hra v C++, kde hráč súťaží proti AI. Cieľom je získať čo najviac budov alebo zdrojov.',
+        iconLists: [
+            '/icons/cplusplus/cplusplus-original.svg',
+            '/icons/c/c-original.svg',
+            '/icons/cmake/cmake-original.svg',
+            '/icons/clion/clion-original.svg',
+            '/icons/git/git-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/goodgame-empire-mini',
+        category: 'BI-PA2',
+        year: '2023',
+        img: 'school-projects/goodgame-empire-mini.png',
+    },
+    {
+        id: 11,
+        title: 'C++ projekty',
+        des: 'Repozitár obsahujúci všetky moje C++ kódy – od domácich úloh z ProgTestu až po prípravu na skúšky.',
+        iconLists: ['/icons/cplusplus/cplusplus-original.svg'],
+        link: 'https://github.com/fit-school-projects/Cpp',
+        category: 'BI-PA2',
+        year: '2023',
+        img: 'school-projects/cpp.png',
+    },
+    {
+        id: 12,
+        title: 'C projekty',
+        des: 'Repozitár s mojimi C kódmi – od domácich úloh z ProgTestu až po menšie programy, ktoré mi pomohli osvojiť si základy programovania.',
+        iconLists: ['/icons/c/c-original.svg'],
+        link: 'https://github.com/fit-school-projects/C',
+        category: 'BI-PA1',
+        year: '2021',
+        img: 'school-projects/c.png',
+    },
 ];
 
 export const programmingLanguages = [
     {
         name: ['Angular'],
         icon: ['/icons/angular/angular-original.svg'],
-        proficiency: 75,
+        proficiency: 60,
         experience: '2+ years',
         skillLevel: 'Intermediate',
+        description: 'Frontend development',
     },
     {
         name: ['Java'],
@@ -257,16 +301,19 @@ export const programmingLanguages = [
         proficiency: 80,
         experience: '3+ years',
         skillLevel: 'Advanced',
+        description: 'Backend development & microservices',
     },
     {
         name: ['PostgreSQL', 'MySQL'],
         icon: [
             '/icons/postgresql/postgresql-original.svg',
             '/icons/mysql/mysql-original.svg',
+            'liquibase.svg',
         ],
         proficiency: 85,
         experience: '4+ years',
         skillLevel: 'Advanced',
+        description: 'Persistence',
     },
     {
         name: ['Python', 'Node.js'],
@@ -274,7 +321,7 @@ export const programmingLanguages = [
             '/icons/python/python-original.svg',
             '/icons/nodejs/nodejs-original.svg',
         ],
-        proficiency: 50,
+        proficiency: 45,
         skillLevel: 'Intermediate',
         description: 'Scripting and automation',
     },
@@ -284,7 +331,7 @@ export const programmingLanguages = [
             '/icons/react/react-original.svg',
             '/icons/nextjs/nextjs-original.svg',
         ],
-        proficiency: 60,
+        proficiency: 50,
         experience: '3+ years',
         skillLevel: 'Intermediate',
         description: 'Dynamic websites',
@@ -298,6 +345,7 @@ export const programmingLanguages = [
         proficiency: 90,
         experience: '4+ years',
         skillLevel: 'Advanced',
+        description: 'Frontend development',
     },
     {
         name: ['C++', 'C'],
@@ -305,8 +353,8 @@ export const programmingLanguages = [
             '/icons/cplusplus/cplusplus-original.svg',
             '/icons/c/c-original.svg',
         ],
-        proficiency: 40,
-        experience: '4 years',
+        proficiency: 35,
+        experience: '2 years',
         skillLevel: 'Intermediate',
         description: 'Backend development',
     },
@@ -323,7 +371,7 @@ export const programmingLanguages = [
             '/icons/html5/html5-original.svg',
             '/icons/css3/css3-original.svg',
         ],
-        proficiency: 90,
+        proficiency: 95,
         experience: '4 years',
         skillLevel: 'Advanced',
         description: 'Static websites',
@@ -351,67 +399,6 @@ export const programmingLanguages = [
         experience: '1 year',
         skillLevel: 'Beginner',
         description: 'NoSQL databases',
-    },
-];
-
-export const testimonials = [
-    {
-        quote: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: 'Michael Johnson',
-        title: 'Director of AlphaStream Technologies',
-    },
-    {
-        quote: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: 'Michael Johnson',
-        title: 'Director of AlphaStream Technologies',
-    },
-    {
-        quote: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: 'Michael Johnson',
-        title: 'Director of AlphaStream Technologies',
-    },
-    {
-        quote: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: 'Michael Johnson',
-        title: 'Director of AlphaStream Technologies',
-    },
-    {
-        quote: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: 'Michael Johnson',
-        title: 'Director of AlphaStream Technologies',
-    },
-];
-
-export const companies = [
-    {
-        id: 1,
-        name: 'cloudinary',
-        img: '/cloud.svg',
-        nameImg: '/cloudName.svg',
-    },
-    {
-        id: 2,
-        name: 'appwrite',
-        img: '/app.svg',
-        nameImg: '/appName.svg',
-    },
-    {
-        id: 3,
-        name: 'HOSTINGER',
-        img: '/host.svg',
-        nameImg: '/hostName.svg',
-    },
-    {
-        id: 4,
-        name: 'stream',
-        img: '/s.svg',
-        nameImg: '/streamName.svg',
-    },
-    {
-        id: 5,
-        name: 'docker.',
-        img: '/dock.svg',
-        nameImg: '/dockerName.svg',
     },
 ];
 

@@ -41,6 +41,7 @@ export const BentoGridItem = ({
     titleClassName,
     spareImg,
     link,
+    t,
 }: {
     className?: string;
     id: number;
@@ -51,6 +52,7 @@ export const BentoGridItem = ({
     titleClassName?: string;
     spareImg?: string;
     link?: string;
+    t: (key: string) => string;
 }) => {
     const leftLists = ['ReactJS', 'NextJS', 'Angular'];
     const rightLists = ['Java', 'MySQL', 'Python'];
@@ -134,21 +136,21 @@ export const BentoGridItem = ({
                         <div className='flex flex-col space-y-4 font-sans text-sm lg:text-base max-w-80 z-10 mt-4'>
                             <div className='bg-[#10132E]/50 rounded-lg p-3 border border-white/10'>
                                 <div className='font-bold text-white mb-1'>
-                                    České vysoké učení technické v Praze
+                                    {t('about.education.name')}
                                 </div>
                                 <div className='text-[#C1C2D3] text-xs'>
-                                    Ing., FIT - Webové inžinierstvo
+                                    Ing., FIT - {t('about.education.field')}
                                 </div>
                                 <div className='text-blue-400 text-xs'>
-                                    2025 - súčasnosť
+                                    2025 - {t('generic.present')}
                                 </div>
                             </div>
                             <div className='bg-[#10132E]/50 rounded-lg p-3 border border-white/10'>
                                 <div className='font-bold text-white mb-1'>
-                                    České vysoké učení technické v Praze
+                                    {t('about.education.name')}
                                 </div>
                                 <div className='text-[#C1C2D3] text-xs'>
-                                    Bc., FIT - Webové inžinierstvo
+                                    Bc., FIT - {t('about.education.field')}
                                 </div>
                                 <div className='text-blue-400 text-xs'>
                                     2021 - 2025
@@ -203,7 +205,7 @@ export const BentoGridItem = ({
                             onClick={() => link && window.open(link, '_blank')}
                         >
                             <div className='text-blue-400 hover:text-blue-300 transition-colors duration-200 underline pt-4'>
-                                Visit my LinkedIn →
+                                {t('about.linkedin.visit')}
                             </div>
                             <GridGlobe />
                         </div>
@@ -224,7 +226,11 @@ export const BentoGridItem = ({
                             </div>
 
                             <MagicButton
-                                title={liked ? 'Thank You!' : 'Give it a like'}
+                                title={
+                                    liked
+                                        ? t('about.likes.thankYou')
+                                        : t('about.likes.button')
+                                }
                                 icon={<FaHeart />}
                                 position='left'
                                 handleClick={handleLike}
@@ -237,13 +243,13 @@ export const BentoGridItem = ({
                         <div className='flex flex-col space-y-4 font-sans text-sm lg:text-base max-w-80 z-10 mt-4'>
                             <div className='bg-[#10132E]/50 rounded-lg p-3 border border-white/10'>
                                 <div className='font-bold text-white mb-1'>
-                                    Junior software developer
+                                    {t('about.workExperience.position')}
                                 </div>
                                 <div className='text-[#C1C2D3] text-xs'>
                                     innovis, s.r.o.
                                 </div>
                                 <div className='text-blue-400 text-xs'>
-                                    2023 - súčasnosť
+                                    2023 - {t('generic.present')}
                                 </div>
                             </div>
                             <Meteors number={20} />

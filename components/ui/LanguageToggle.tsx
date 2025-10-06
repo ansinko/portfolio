@@ -11,11 +11,10 @@ const LanguageToggle = () => {
 
     const languages = [
         { code: 'en', name: 'EN', flag: '🇺🇸' },
-        { code: 'cs', name: 'CS', flag: '🇨🇿' },
         { code: 'sk', name: 'SK', flag: '🇸🇰' },
     ] as const;
 
-    const handleLanguageChange = (lang: 'en' | 'cs' | 'sk') => {
+    const handleLanguageChange = (lang: 'en' | 'sk') => {
         setLanguage(lang);
         setIsOpen(false);
     };
@@ -75,7 +74,7 @@ const LanguageToggle = () => {
                                     key={lang.code}
                                     onClick={() =>
                                         handleLanguageChange(
-                                            lang.code as 'en' | 'cs' | 'sk'
+                                            lang.code as 'en' | 'sk'
                                         )
                                     }
                                     className={cn(

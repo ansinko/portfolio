@@ -21,7 +21,6 @@ export default function Home() {
                 <FloatingNav navItems={getNavItems(t)} />
                 <Hero />
                 <Grid />
-                {/* <RecentProjects /> */}
                 <SchoolWork />
                 <ProgrammingLanguages />
                 <Footer />
