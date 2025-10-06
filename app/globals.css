@@ -1,52 +1,52 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-black: #000;
-  --color-black-100: #000319;
-  --color-black-200: rgba(17, 25, 40, 0.75);
-  --color-black-300: rgba(255, 255, 255, 0.125);
+    --color-black: #000;
+    --color-black-100: #000319;
+    --color-black-200: rgba(17, 25, 40, 0.75);
+    --color-black-300: rgba(255, 255, 255, 0.125);
 
-  --color-white: #fff;
-  --color-white-100: #bec1dd;
-  --color-white-200: #c1c2d3;
+    --color-white: #fff;
+    --color-white-100: #bec1dd;
+    --color-white-200: #c1c2d3;
 
-  --color-blue-100: #e4ecff;
-  --color-purple: #cbacf9;
+    --color-blue-100: #e4ecff;
+    --color-purple: #cbacf9;
 
-  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+    --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
 }
 
 @keyframes spotlight {
-  0% {
-    opacity: 0;
-    transform: translate(-72%, -62%) scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -40%) scale(1);
-  }
+    0% {
+        opacity: 0;
+        transform: translate(-72%, -62%) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -40%) scale(1);
+    }
 }
 
 @theme inline {
-  --animate-meteor-effect: meteor 5s linear infinite;
+    --animate-meteor-effect: meteor 5s linear infinite;
 
-  @keyframes meteor {
-    0% {
-      transform: rotate(215deg) translateX(0);
-      opacity: 1;
+    @keyframes meteor {
+        0% {
+            transform: rotate(215deg) translateX(0);
+            opacity: 1;
+        }
+        70% {
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(215deg) translateX(-500px);
+            opacity: 0;
+        }
     }
-    70% {
-      opacity: 1;
-    }
-    100% {
-      transform: rotate(215deg) translateX(-500px);
-      opacity: 0;
-    }
-  }
 }
 
 @layer utilities {
-  .heading {
-    @apply font-bold text-4xl md:text-5xl text-center;
-  }
+    .heading {
+        @apply font-bold text-4xl md:text-5xl text-center;
+    }
 }

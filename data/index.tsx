@@ -1,250 +1,437 @@
-import {
-  FaPerson,
-  FaDiagramProject,
-  FaGraduationCap,
-  FaBriefcase,
-} from 'react-icons/fa6';
+import { FaPerson, FaDiagramProject, FaGraduationCap } from 'react-icons/fa6';
 
-export const navItems = [
-  {
-    name: 'About',
-    link: '#about',
-    icon: <FaPerson />,
-  },
-  {
-    name: 'Projects',
-    link: '#projects',
-    icon: (
-      <FaDiagramProject className='h-4 w-4 text-neutral-500 dark:text-white' />
-    ),
-  },
-  {
-    name: 'Work experience',
-    link: '#work',
-    icon: <FaBriefcase className='h-4 w-4 text-neutral-500 dark:text-white' />,
-  },
+export const getNavItems = (t: (key: string) => string) => [
+    {
+        name: t('navigation.about'),
+        link: '#about',
+        icon: <FaPerson />,
+    },
+    {
+        name: t('navigation.projects'),
+        link: '#projects',
+        icon: (
+            <FaDiagramProject className='h-4 w-4 text-neutral-500 dark:text-white' />
+        ),
+    },
+    {
+        name: t('navigation.skills'),
+        link: '#skills',
+        icon: (
+            <FaGraduationCap className='h-4 w-4 text-neutral-500 dark:text-white' />
+        ),
+    },
 ];
 
 export const gridItems = [
-  {
-    id: 1,
-    title:
-      'I am a team player who likes challenges, is down to earth with a good sense of humour, communicates clearly, thinks critically, comes up with new ideas, and always finishes and delivers work on time',
-    description: 'Soft skills',
-    className: 'lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]',
-    imgClassName: 'w-full h-full',
-    titleClassName: 'justify-end',
-    img: '/b1.svg',
-    spareImg: '',
-  },
-  {
-    id: 2,
-    title: '',
-    description: 'Work experience',
-    className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
-    imgClassName: '',
-    titleClassName: 'justify-start',
-    img: '',
-    spareImg: '',
-  },
-  {
-    id: 3,
-    title: 'My tech stack',
-    description: 'I constantly try to improve',
-    className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
-    imgClassName: '',
-    titleClassName: 'justify-center',
-    img: '',
-    spareImg: '',
-  },
-  {
-    id: 4,
-    title: '',
-    description: 'Education',
-    className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
-    imgClassName: '',
-    titleClassName: 'justify-start',
-    img: '/grid.svg',
-    spareImg: '/b4.svg',
-  },
+    {
+        id: 1,
+        title: 'I am a team player who likes challenges, is down to earth with a good sense of humour, communicates clearly, thinks critically, comes up with new ideas, and always finishes and delivers work on time',
+        description: 'Soft skills',
+        className: 'lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]',
+        imgClassName: 'w-full h-full',
+        titleClassName: 'justify-end',
+        img: '/b1.svg',
+        spareImg: '',
+    },
+    {
+        id: 2,
+        title: '',
+        description: 'Work experience',
+        className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
+        imgClassName: '',
+        titleClassName: 'justify-start',
+        img: '',
+        spareImg: '',
+    },
+    {
+        id: 3,
+        title: 'My tech stack',
+        description: 'I constantly try to improve',
+        className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
+        imgClassName: '',
+        titleClassName: 'justify-center',
+        img: '',
+        spareImg: '',
+    },
+    {
+        id: 4,
+        title: '',
+        description: 'Education',
+        className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
+        imgClassName: '',
+        titleClassName: 'justify-start',
+        img: '/grid.svg',
+        spareImg: '/b4.svg',
+    },
 
-  {
-    id: 5,
-    title:
-      'I love automating workflows and building scripts in Python and Node.js to boost productivity and eliminate repetitive manual tasks.',
-    description: '',
-    className: 'md:col-span-3 md:row-span-1',
-    imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60',
-    titleClassName: 'justify-center md:justify-start lg:justify-center',
-    img: '/b5.svg',
-    spareImg: '/grid.svg',
-  },
-  {
-    id: 6,
-    title: 'Do you like what you see so far?',
-    description: 'Show some love',
-    className: 'lg:col-span-3 md:col-span-3 md:row-span-1',
-    imgClassName: '',
-    titleClassName: 'justify-center md:max-w-full max-w-60 text-center',
-    img: '',
-    spareImg: '',
-  },
-  {
-    id: 7,
-    title: 'Tech enthusiast with a passion for development',
-    description: '',
-    className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
-    imgClassName: '',
-    titleClassName: 'justify-start',
-    img: '',
-    spareImg: '',
-    link: 'https://www.linkedin.com/in/andrej-meliska-15278026b/',
-  },
+    {
+        id: 5,
+        title: 'I love automating workflows and building scripts in Python and Node.js to boost productivity and eliminate repetitive manual tasks.',
+        description: '',
+        className: 'md:col-span-3 md:row-span-1',
+        imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60',
+        titleClassName: 'justify-center md:justify-start lg:justify-center',
+        img: '/b5.svg',
+        spareImg: '/grid.svg',
+    },
+    {
+        id: 6,
+        title: 'Do you like what you see so far?',
+        description: 'Show some love',
+        className: 'lg:col-span-3 md:col-span-3 md:row-span-1',
+        imgClassName: '',
+        titleClassName: 'justify-center md:max-w-full max-w-60 text-center',
+        img: '',
+        spareImg: '',
+    },
+    {
+        id: 7,
+        title: 'Tech enthusiast with a passion for development',
+        description: '',
+        className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
+        imgClassName: '',
+        titleClassName: 'justify-start',
+        img: '',
+        spareImg: '',
+        link: 'https://www.linkedin.com/in/andrej-meliska-15278026b/',
+    },
 ];
 
-export const projects = [
-  {
-    id: 1,
-    title: '3D Solar System Planets to Explore',
-    des: 'Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.',
-    img: '/p1.svg',
-    iconLists: ['/re.svg', '/tail.svg', '/ts.svg', '/three.svg', '/fm.svg'],
-    link: '/ui.earth.com',
-  },
-  {
-    id: 2,
-    title: 'Yoom - Video Conferencing App',
-    des: 'Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.',
-    img: '/p2.svg',
-    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/stream.svg', '/c.svg'],
-    link: '/ui.yoom.com',
-  },
-  {
-    id: 3,
-    title: 'AI Image SaaS - Canva Application',
-    des: 'A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.',
-    img: '/p3.svg',
-    iconLists: ['/re.svg', '/tail.svg', '/ts.svg', '/three.svg', '/c.svg'],
-    link: '/ui.aiimg.com',
-  },
-  {
-    id: 4,
-    title: 'Animated Apple Iphone 3D Website',
-    des: 'Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..',
-    img: '/p4.svg',
-    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/three.svg', '/gsap.svg'],
-    link: '/ui.apple.com',
-  },
+export const schoolWork = [
+    {
+        id: 1,
+        title: 'Moderné dátové formáty v praxi',
+        des: 'Projekt v rámci predmetu BI-MDF zameraný na modelovanie dát a ich reprezentáciu v rôznych formátoch (RDF, SPARQL, JSON, CSV, XML), vrátane dotazovania a transformácií.',
+        iconLists: [
+            '/icons/html5/html5-original.svg',
+            'xml.png',
+            'csv.png',
+            '/icons/json/json-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/modern-data-formats',
+        category: 'BI-MDF',
+        year: '2022',
+        img: 'school-projects/json-code-example.png',
+    },
+    {
+        id: 2,
+        title: 'Big Data Analytika',
+        des: 'Semestrálna práca zameraná na spracovanie a analýzu Big Data s využitím MongoDB, Elasticsearch a Kibany. Na vybraných datasetoch som skúmal prepojenia a korelácie, ktoré som vizualizoval v Kibane.',
+        iconLists: [
+            '/icons/python/python-original.svg',
+            '/icons/mongodb/mongodb-original.svg',
+            '/icons/elasticsearch/elasticsearch-original.svg',
+            '/icons/kibana/kibana-original.svg',
+            '/icons/json/json-original.svg',
+            '/icons/docker/docker-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/big-data',
+        category: 'BI-BIG',
+        year: '2024',
+        img: 'school-projects/bigdata-overview.png',
+    },
+    {
+        id: 3,
+        title: 'Stránka o mne',
+        des: 'Stránka o mne z predmetu BI-ZWU, kde som sa naučil základné koncepty návrhu webového rozhrania z pohľadu používateľa a osvojil si HTML a CSS.',
+        iconLists: [
+            '/icons/html5/html5-original.svg',
+            '/icons/css3/css3-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/my-first-web',
+        category: 'BI-ZWU',
+        year: '2023',
+        img: 'school-projects/about-me-web.png',
+        demo: 'https://andrej.meliska.sk/',
+    },
+    {
+        id: 4,
+        title: 'The Drake',
+        des: 'Implementácia stolnej hry The Drake (inšpirovanej hrou The Duke) pre dvoch hráčov v Jave. Zjednodušená verzia s menším hracím plánom a prispôsobenými pravidlami.',
+        iconLists: [
+            '/icons/java/java-original.svg',
+            '/icons/git/git-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/java-drake-game',
+        category: 'BI-PJV',
+        year: '2023',
+        img: 'school-projects/drake.png',
+    },
+    {
+        id: 5,
+        title: 'PHP projekty',
+        des: 'Súbor PHP projektov, na ktorých som si prakticky vyskúšal OOP, Composer, REST API, ORM, perzistenciu dát, scraping a unit testing.',
+        iconLists: [
+            '/icons/php/php-original.svg',
+            '/icons/symfony/symfony-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/php',
+        category: 'BI-PHP',
+        year: '2024',
+        img: 'school-projects/php.png',
+    },
+    {
+        id: 6,
+        title: 'Aplikácia na odporúčanie relevantných produktov',
+        des: 'Webová aplikácia odporúčajúca produkty používateľovi na základe kolaboratívneho filtrovania a podobnosti s inými používateľmi.',
+        iconLists: [
+            '/icons/php/php-original.svg',
+            '/icons/symfony/symfony-original.svg',
+            '/icons/postgresql/postgresql-original.svg',
+            'icons/javascript/javascript-original.svg',
+            '/icons/react/react-original.svg',
+            '/icons/docker/docker-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/product-recommendation-app',
+        category: 'BI-VWM',
+        year: '2023',
+        img: 'school-projects/recommendation-app.png',
+    },
+    {
+        id: 7,
+        title: 'Goodgame Empire Mini',
+        des: 'Strategická budovateľská hra v C++, kde hráč súťaží proti AI. Cieľom je získať čo najviac budov alebo zdrojov.',
+        iconLists: [
+            '/icons/cplusplus/cplusplus-original.svg',
+            '/icons/c/c-original.svg',
+            '/icons/cmake/cmake-original.svg',
+            '/icons/clion/clion-original.svg',
+            '/icons/git/git-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/goodgame-empire-mini',
+        category: 'BI-PA2',
+        year: '2023',
+        img: 'school-projects/goodgame-empire-mini.png',
+    },
+    {
+        id: 8,
+        title: 'C++ projekty',
+        des: 'Repozitár obsahujúci všetky moje C++ kódy – od domácich úloh z ProgTestu až po prípravu na skúšky.',
+        iconLists: ['/icons/cplusplus/cplusplus-original.svg'],
+        link: 'https://github.com/fit-school-projects/Cpp',
+        category: 'BI-PA2',
+        year: '2023',
+        img: 'school-projects/cpp.png',
+    },
+    {
+        id: 9,
+        title: 'C projekty',
+        des: 'Repozitár s mojimi C kódmi – od domácich úloh z ProgTestu až po menšie programy, ktoré mi pomohli osvojiť si základy programovania.',
+        iconLists: ['/icons/c/c-original.svg'],
+        link: 'https://github.com/fit-school-projects/C',
+        category: 'BI-PA1',
+        year: '2021',
+        img: 'school-projects/c.png',
+    },
+    {
+        id: 10,
+        title: 'Rezervačný systém učební',
+        des: 'Rezervačný systém učební implementovaný v PHP s dôrazom na správu miestností a rezervácií.',
+        iconLists: [
+            '/icons/php/php-original.svg',
+            '/icons/symfony/symfony-original.svg',
+            '/icons/javascript/javascript-original.svg',
+            '/icons/postgresql/postgresql-original.svg',
+            '/icons/docker/docker-original.svg',
+            '/icons/postman/postman-original.svg',
+            '/icons/git/git-original.svg',
+        ],
+        link: 'https://github.com/fit-school-projects/room-reservations-app',
+        category: 'BI-TWA',
+        year: '2023',
+        img: 'school-projects/reservations-app.png',
+    },
+];
+
+export const programmingLanguages = [
+    {
+        name: ['Angular'],
+        icon: ['/icons/angular/angular-original.svg'],
+        proficiency: 75,
+        experience: '2+ years',
+        skillLevel: 'Intermediate',
+    },
+    {
+        name: ['Java'],
+        icon: ['/icons/java/java-original.svg'],
+        proficiency: 80,
+        experience: '3+ years',
+        skillLevel: 'Advanced',
+    },
+    {
+        name: ['PostgreSQL', 'MySQL'],
+        icon: [
+            '/icons/postgresql/postgresql-original.svg',
+            '/icons/mysql/mysql-original.svg',
+        ],
+        proficiency: 85,
+        experience: '4+ years',
+        skillLevel: 'Advanced',
+    },
+    {
+        name: ['Python', 'Node.js'],
+        icon: [
+            '/icons/python/python-original.svg',
+            '/icons/nodejs/nodejs-original.svg',
+        ],
+        proficiency: 50,
+        skillLevel: 'Intermediate',
+        description: 'Scripting and automation',
+    },
+    {
+        name: ['React', 'Next.js'],
+        icon: [
+            '/icons/react/react-original.svg',
+            '/icons/nextjs/nextjs-original.svg',
+        ],
+        proficiency: 60,
+        experience: '3+ years',
+        skillLevel: 'Intermediate',
+        description: 'Dynamic websites',
+    },
+    {
+        name: ['JavaScript', 'TypeScript'],
+        icon: [
+            '/icons/javascript/javascript-original.svg',
+            '/icons/typescript/typescript-original.svg',
+        ],
+        proficiency: 90,
+        experience: '4+ years',
+        skillLevel: 'Advanced',
+    },
+    {
+        name: ['C++', 'C'],
+        icon: [
+            '/icons/cplusplus/cplusplus-original.svg',
+            '/icons/c/c-original.svg',
+        ],
+        proficiency: 40,
+        experience: '4 years',
+        skillLevel: 'Intermediate',
+        description: 'Backend development',
+    },
+    {
+        name: ['PHP'],
+        icon: ['/icons/php/php-original.svg'],
+        proficiency: 40,
+        skillLevel: 'Beginner',
+        description: 'Backend development',
+    },
+    {
+        name: ['HTML', 'CSS'],
+        icon: [
+            '/icons/html5/html5-original.svg',
+            '/icons/css3/css3-original.svg',
+        ],
+        proficiency: 90,
+        experience: '4 years',
+        skillLevel: 'Advanced',
+        description: 'Static websites',
+    },
+    {
+        name: ['Docker'],
+        icon: ['/icons/docker/docker-original.svg'],
+        proficiency: 60,
+        experience: '3+ years',
+        skillLevel: 'Intermediate',
+        description: 'Containerization',
+    },
+    {
+        name: ['Git', 'Jira'],
+        icon: ['/icons/git/git-original.svg', '/icons/jira/jira-original.svg'],
+        proficiency: 90,
+        experience: '3+ years',
+        skillLevel: 'Advanced',
+        description: 'Version control and project management',
+    },
+    {
+        name: ['MongoDB'],
+        icon: ['/icons/mongodb/mongodb-original.svg'],
+        proficiency: 20,
+        experience: '1 year',
+        skillLevel: 'Beginner',
+        description: 'NoSQL databases',
+    },
 ];
 
 export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
-  },
+    {
+        quote: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+        name: 'Michael Johnson',
+        title: 'Director of AlphaStream Technologies',
+    },
+    {
+        quote: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+        name: 'Michael Johnson',
+        title: 'Director of AlphaStream Technologies',
+    },
+    {
+        quote: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+        name: 'Michael Johnson',
+        title: 'Director of AlphaStream Technologies',
+    },
+    {
+        quote: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+        name: 'Michael Johnson',
+        title: 'Director of AlphaStream Technologies',
+    },
+    {
+        quote: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+        name: 'Michael Johnson',
+        title: 'Director of AlphaStream Technologies',
+    },
 ];
 
 export const companies = [
-  {
-    id: 1,
-    name: 'cloudinary',
-    img: '/cloud.svg',
-    nameImg: '/cloudName.svg',
-  },
-  {
-    id: 2,
-    name: 'appwrite',
-    img: '/app.svg',
-    nameImg: '/appName.svg',
-  },
-  {
-    id: 3,
-    name: 'HOSTINGER',
-    img: '/host.svg',
-    nameImg: '/hostName.svg',
-  },
-  {
-    id: 4,
-    name: 'stream',
-    img: '/s.svg',
-    nameImg: '/streamName.svg',
-  },
-  {
-    id: 5,
-    name: 'docker.',
-    img: '/dock.svg',
-    nameImg: '/dockerName.svg',
-  },
-];
-
-export const workExperience = [
-  {
-    id: 1,
-    title: 'Frontend Engineer Intern',
-    desc: 'Assisted in the development of a web-based platform using React.js, enhancing interactivity.',
-    className: 'md:col-span-2',
-    thumbnail: '/exp1.svg',
-  },
-  {
-    id: 2,
-    title: 'Mobile App Dev - JSM Tech',
-    desc: 'Designed and developed mobile app for both iOS & Android platforms using React Native.',
-    className: 'md:col-span-2', // change to md:col-span-2
-    thumbnail: '/exp2.svg',
-  },
-  {
-    id: 3,
-    title: 'Freelance App Dev Project',
-    desc: 'Led the dev of a mobile app for a client, from initial concept to deployment on app stores.',
-    className: 'md:col-span-2', // change to md:col-span-2
-    thumbnail: '/exp3.svg',
-  },
-  {
-    id: 4,
-    title: 'Lead Frontend Developer',
-    desc: 'Developed and maintained user-facing features using modern frontend technologies.',
-    className: 'md:col-span-2',
-    thumbnail: '/exp4.svg',
-  },
+    {
+        id: 1,
+        name: 'cloudinary',
+        img: '/cloud.svg',
+        nameImg: '/cloudName.svg',
+    },
+    {
+        id: 2,
+        name: 'appwrite',
+        img: '/app.svg',
+        nameImg: '/appName.svg',
+    },
+    {
+        id: 3,
+        name: 'HOSTINGER',
+        img: '/host.svg',
+        nameImg: '/hostName.svg',
+    },
+    {
+        id: 4,
+        name: 'stream',
+        img: '/s.svg',
+        nameImg: '/streamName.svg',
+    },
+    {
+        id: 5,
+        name: 'docker.',
+        img: '/dock.svg',
+        nameImg: '/dockerName.svg',
+    },
 ];
 
 export const socialMedia = [
-  {
-    id: 1,
-    img: '/git.svg',
-  },
-  {
-    id: 2,
-    img: '/twit.svg',
-  },
-  {
-    id: 3,
-    img: '/link.svg',
-  },
+    {
+        id: 1,
+        img: '/git.svg',
+        link: 'https://github.com/orgs/fit-school-projects/repositories',
+        name: 'GitHub',
+    },
+    {
+        id: 2,
+        img: '/facebook.svg',
+        link: 'https://www.facebook.com/andrej.meliska',
+        name: 'Facebook',
+    },
+    {
+        id: 3,
+        img: '/link.svg',
+        link: 'https://www.linkedin.com/in/andrej-meliska-15278026b/',
+        name: 'LinkedIn',
+    },
 ];
