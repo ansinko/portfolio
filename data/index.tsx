@@ -121,7 +121,7 @@ export const schoolWork = [
         link: 'https://github.com/fit-school-projects/room-reservations-app',
         category: 'BI-TWA',
         year: '2023',
-        img: 'school-projects/reservations-app.png',
+        img: '/school-projects/reservations-app.png',
     },
     {
         id: 2,
@@ -139,11 +139,11 @@ export const schoolWork = [
         iconLists: [
             '/icons/angular/angular-original.svg',
             '/icons/java/java-original.svg',
-            'liquibase.svg',
+            '/Liquibase.svg',
         ],
         category: 'innovis',
         year: '2025',
-        img: 'school-projects/dependencyOverviewDiagram.png',
+        img: '/school-projects/dependencyOverviewDiagram.png',
     },
     {
         id: 3,
@@ -152,12 +152,12 @@ export const schoolWork = [
         iconLists: [
             '/icons/python/python-original.svg',
             '/icons/java/java-original.svg',
-            'Mermaid.svg',
+            '/Mermaid.svg',
         ],
         link: 'https://github.com/ansinko/java_dependency_gen_tool',
         category: 'innovis',
         year: '2025',
-        img: 'school-projects/edocumentsDepDiagramExample.png',
+        img: '/school-projects/edocumentsDepDiagramExample.png',
     },
     {
         id: 4,
@@ -172,7 +172,7 @@ export const schoolWork = [
         link: 'https://github.com/fit-school-projects/modern-data-formats',
         category: 'BI-MDF',
         year: '2022',
-        img: 'school-projects/json-code-example.png',
+        img: '/school-projects/json-code-example.png',
     },
     {
         id: 5,
@@ -189,7 +189,7 @@ export const schoolWork = [
         link: 'https://github.com/fit-school-projects/big-data',
         category: 'BI-BIG',
         year: '2024',
-        img: 'school-projects/bigdata-overview.png',
+        img: '/school-projects/bigdata-overview.png',
     },
     {
         id: 6,
@@ -202,7 +202,7 @@ export const schoolWork = [
         link: 'https://github.com/fit-school-projects/my-first-web',
         category: 'BI-ZWU',
         year: '2023',
-        img: 'school-projects/about-me-web.png',
+        img: '/school-projects/about-me-web.png',
         demo: 'https://andrej.meliska.sk/',
     },
     {
@@ -216,7 +216,7 @@ export const schoolWork = [
         link: 'https://github.com/fit-school-projects/java-drake-game',
         category: 'BI-PJV',
         year: '2023',
-        img: 'school-projects/drake.png',
+        img: '/school-projects/drake.png',
     },
     {
         id: 8,
@@ -229,7 +229,7 @@ export const schoolWork = [
         link: 'https://github.com/fit-school-projects/php',
         category: 'BI-PHP',
         year: '2024',
-        img: 'school-projects/php.png',
+        img: '/school-projects/php.png',
     },
     {
         id: 9,
@@ -246,7 +246,7 @@ export const schoolWork = [
         link: 'https://github.com/fit-school-projects/product-recommendation-app',
         category: 'BI-VWM',
         year: '2023',
-        img: 'school-projects/recommendation-app.png',
+        img: '/school-projects/recommendation-app.png',
     },
     {
         id: 10,
@@ -262,7 +262,7 @@ export const schoolWork = [
         link: 'https://github.com/fit-school-projects/goodgame-empire-mini',
         category: 'BI-PA2',
         year: '2023',
-        img: 'school-projects/goodgame-empire-mini.png',
+        img: '/school-projects/goodgame-empire-mini.png',
     },
     {
         id: 11,
@@ -272,7 +272,7 @@ export const schoolWork = [
         link: 'https://github.com/fit-school-projects/Cpp',
         category: 'BI-PA2',
         year: '2023',
-        img: 'school-projects/cpp.png',
+        img: '/school-projects/cpp.png',
     },
     {
         id: 12,
@@ -282,7 +282,7 @@ export const schoolWork = [
         link: 'https://github.com/fit-school-projects/C',
         category: 'BI-PA1',
         year: '2021',
-        img: 'school-projects/c.png',
+        img: '/school-projects/c.png',
     },
 ];
 
@@ -308,7 +308,7 @@ export const programmingLanguages = [
         icon: [
             '/icons/postgresql/postgresql-original.svg',
             '/icons/mysql/mysql-original.svg',
-            'liquibase.svg',
+            '/Liquibase.svg',
         ],
         proficiency: 85,
         experience: '4+ years',

@@ -2,6 +2,7 @@
 
 import { programmingLanguages } from '@/data';
 import { useLanguage } from '@/contexts/LanguageContext';
+import Image from 'next/image';
 
 const ProgrammingLanguages = () => {
     const { t } = useLanguage();
@@ -36,9 +37,11 @@ const ProgrammingLanguages = () => {
                                                 transform: `translateX(-${5 * index + 2}px)`,
                                             }}
                                         >
-                                            <img
+                                            <Image
                                                 src={icon}
                                                 alt='icon5'
+                                                width={40}
+                                                height={40}
                                                 className='p-2'
                                             />
                                         </div>

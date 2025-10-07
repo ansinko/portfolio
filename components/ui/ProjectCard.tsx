@@ -5,6 +5,7 @@ import { FaGithub } from 'react-icons/fa6';
 import { FaExternalLinkAlt, FaTimes } from 'react-icons/fa';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface ProjectCardProps {
     title: string;
@@ -87,10 +88,11 @@ const ProjectCard = ({
                             className='relative w-full h-48 overflow-hidden rounded-2xl'
                             style={{ backgroundColor: '#13162D' }}
                         >
-                            <img
-                                src={image}
+                            <Image
+                                src={image || ''}
                                 alt={title}
-                                className='w-full h-full object-cover'
+                                fill
+                                className='object-cover'
                             />
                         </div>
                     </div>
@@ -129,9 +131,11 @@ const ProjectCard = ({
                                         transform: `translateX(-${5 * index + 2}px)`,
                                     }}
                                 >
-                                    <img
+                                    <Image
                                         src={icon}
                                         alt='icon5'
+                                        width={40}
+                                        height={40}
                                         className='p-2'
                                     />
                                 </div>
@@ -221,10 +225,11 @@ const ProjectCard = ({
                                         className='relative w-full h-64 overflow-hidden rounded-2xl'
                                         style={{ backgroundColor: '#13162D' }}
                                     >
-                                        <img
-                                            src={image}
+                                        <Image
+                                            src={image || ''}
                                             alt={title}
-                                            className='w-full h-full object-cover'
+                                            fill
+                                            className='object-cover'
                                         />
                                     </div>
                                 </div>
@@ -260,9 +265,11 @@ const ProjectCard = ({
                                                     key={index}
                                                     className='border border-white/[.2] rounded-full bg-black w-12 h-12 flex justify-center items-center'
                                                 >
-                                                    <img
+                                                    <Image
                                                         src={icon}
                                                         alt={`tech-${index}`}
+                                                        width={48}
+                                                        height={48}
                                                         className='p-2'
                                                     />
                                                 </div>
