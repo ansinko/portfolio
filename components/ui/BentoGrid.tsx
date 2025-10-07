@@ -15,9 +15,11 @@ import MagicButton from './MagicButton';
 export const BentoGrid = ({
     className,
     children,
+    t,
 }: {
     className?: string;
     children?: React.ReactNode;
+    t: (key: string) => string;
 }) => {
     return (
         <div
