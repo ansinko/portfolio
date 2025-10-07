@@ -1,4 +1,9 @@
-import { FaPerson, FaDiagramProject, FaGraduationCap } from 'react-icons/fa6';
+import {
+    FaPerson,
+    FaDiagramProject,
+    FaGraduationCap,
+    FaEnvelope,
+} from 'react-icons/fa6';
 
 export const getNavItems = (t: (key: string) => string) => [
     {
@@ -24,7 +29,7 @@ export const getNavItems = (t: (key: string) => string) => [
         name: t('navigation.contact'),
         link: '#contact',
         icon: (
-            <FaGraduationCap className='h-4 w-4 text-neutral-500 dark:text-white' />
+            <FaEnvelope className='h-4 w-4 text-neutral-500 dark:text-white' />
         ),
     },
 ];
@@ -104,11 +109,11 @@ export const gridItems = (t: (key: string) => string) => [
     },
 ];
 
-export const schoolWork = [
+export const schoolWork = (t: (key: string) => string) => [
     {
         id: 1,
-        title: 'Rezervačný systém učební',
-        des: 'Rezervačný systém učební implementovaný v PHP s dôrazom na správu miestností a rezervácií.',
+        title: t('projects.project1.title'),
+        des: t('projects.project1.des'),
         iconLists: [
             '/icons/php/php-original.svg',
             '/icons/symfony/symfony-original.svg',
@@ -125,17 +130,8 @@ export const schoolWork = [
     },
     {
         id: 2,
-        title: 'Analýza a dekompozícia monolitického informačného systému',
-        des: `V tejto bakalárskej práci je analyzovaný monolitický informačný systém s 
-                modulárnou biznis logikou za účelom výberu vhodného modulu na dekompozíciu
-                a jeho transformáciu na samostatne nasaditeľný modul. Následne je tento modul 
-                oddelený, prepracovaný do podoby samostatnej mikroslužby a integrovaný
-                späť do pôvodného systému prostredníctvom architektonického štýlu REST.
-                Pri komunikácii s používateľským rozhraním je overenie používateľa zabezpečené 
-                pomocou JWT. Výsledkom práce je plne funkčná a nasaditeľná mikroslužba eDokumenty. 
-                Prínosom práce je zvýšenie flexibility, škálovateľnosti
-                a rozšíriteľnosti informačného systému, pričom práca zároveň vytvára základ
-                pre budúcu dekompozíciu ďalších modulov systému.`,
+        title: t('projects.project2.title'),
+        des: t('projects.project2.des'),
         iconLists: [
             '/icons/angular/angular-original.svg',
             '/icons/java/java-original.svg',
@@ -147,8 +143,8 @@ export const schoolWork = [
     },
     {
         id: 3,
-        title: 'Nástroj na generovanie závislostí v Java projekte',
-        des: `This tool analyzes the source code of a Java project, identifies dependencies for each class, and generates a list in Mermaid format for visualization.`,
+        title: t('projects.project3.title'),
+        des: t('projects.project3.des'),
         iconLists: [
             '/icons/python/python-original.svg',
             '/icons/java/java-original.svg',
@@ -161,8 +157,8 @@ export const schoolWork = [
     },
     {
         id: 4,
-        title: 'Moderné dátové formáty v praxi',
-        des: 'Projekt v rámci predmetu BI-MDF zameraný na modelovanie dát a ich reprezentáciu v rôznych formátoch (RDF, SPARQL, JSON, CSV, XML), vrátane dotazovania a transformácií.',
+        title: t('projects.project4.title'),
+        des: t('projects.project4.des'),
         iconLists: [
             '/icons/html5/html5-original.svg',
             'csv-svgrepo-com.svg',
@@ -176,8 +172,8 @@ export const schoolWork = [
     },
     {
         id: 5,
-        title: 'Big Data Analytika',
-        des: 'Semestrálna práca zameraná na spracovanie a analýzu Big Data s využitím MongoDB, Elasticsearch a Kibany. Na vybraných datasetoch som skúmal prepojenia a korelácie, ktoré som vizualizoval v Kibane.',
+        title: t('projects.project5.title'),
+        des: t('projects.project5.des'),
         iconLists: [
             '/icons/python/python-original.svg',
             '/icons/mongodb/mongodb-original.svg',
@@ -193,8 +189,8 @@ export const schoolWork = [
     },
     {
         id: 6,
-        title: 'Stránka o mne',
-        des: 'Stránka o mne z predmetu BI-ZWU, kde som sa naučil základné koncepty návrhu webového rozhrania z pohľadu používateľa a osvojil si HTML a CSS.',
+        title: t('projects.project6.title'),
+        des: t('projects.project6.des'),
         iconLists: [
             '/icons/html5/html5-original.svg',
             '/icons/css3/css3-original.svg',
@@ -207,8 +203,8 @@ export const schoolWork = [
     },
     {
         id: 7,
-        title: 'The Drake',
-        des: 'Implementácia stolnej hry The Drake (inšpirovanej hrou The Duke) pre dvoch hráčov v Jave. Zjednodušená verzia s menším hracím plánom a prispôsobenými pravidlami.',
+        title: t('projects.project7.title'),
+        des: t('projects.project7.des'),
         iconLists: [
             '/icons/java/java-original.svg',
             '/icons/git/git-original.svg',
@@ -220,8 +216,8 @@ export const schoolWork = [
     },
     {
         id: 8,
-        title: 'PHP projekty',
-        des: 'Súbor PHP projektov, na ktorých som si prakticky vyskúšal OOP, Composer, REST API, ORM, perzistenciu dát, scraping a unit testing.',
+        title: t('projects.project8.title'),
+        des: t('projects.project8.des'),
         iconLists: [
             '/icons/php/php-original.svg',
             '/icons/symfony/symfony-original.svg',
@@ -233,8 +229,8 @@ export const schoolWork = [
     },
     {
         id: 9,
-        title: 'Aplikácia na odporúčanie relevantných produktov',
-        des: 'Webová aplikácia odporúčajúca produkty používateľovi na základe kolaboratívneho filtrovania a podobnosti s inými používateľmi.',
+        title: t('projects.project9.title'),
+        des: t('projects.project9.des'),
         iconLists: [
             '/icons/php/php-original.svg',
             '/icons/symfony/symfony-original.svg',
@@ -250,8 +246,8 @@ export const schoolWork = [
     },
     {
         id: 10,
-        title: 'Goodgame Empire Mini',
-        des: 'Strategická budovateľská hra v C++, kde hráč súťaží proti AI. Cieľom je získať čo najviac budov alebo zdrojov.',
+        title: t('projects.project10.title'),
+        des: t('projects.project10.des'),
         iconLists: [
             '/icons/cplusplus/cplusplus-original.svg',
             '/icons/c/c-original.svg',
@@ -266,8 +262,8 @@ export const schoolWork = [
     },
     {
         id: 11,
-        title: 'C++ projekty',
-        des: 'Repozitár obsahujúci všetky moje C++ kódy – od domácich úloh z ProgTestu až po prípravu na skúšky.',
+        title: t('projects.project11.title'),
+        des: t('projects.project11.des'),
         iconLists: ['/icons/cplusplus/cplusplus-original.svg'],
         link: 'https://github.com/fit-school-projects/Cpp',
         category: 'BI-PA2',
@@ -276,8 +272,8 @@ export const schoolWork = [
     },
     {
         id: 12,
-        title: 'C projekty',
-        des: 'Repozitár s mojimi C kódmi – od domácich úloh z ProgTestu až po menšie programy, ktoré mi pomohli osvojiť si základy programovania.',
+        title: t('projects.project12.title'),
+        des: t('projects.project12.des'),
         iconLists: ['/icons/c/c-original.svg'],
         link: 'https://github.com/fit-school-projects/C',
         category: 'BI-PA1',
@@ -286,22 +282,22 @@ export const schoolWork = [
     },
 ];
 
-export const programmingLanguages = [
+export const programmingLanguages = (t: (key: string) => string) => [
     {
         name: ['Angular'],
         icon: ['/icons/angular/angular-original.svg'],
         proficiency: 60,
-        experience: '2+ years',
-        skillLevel: 'Intermediate',
-        description: 'Frontend development',
+        experience: '2+ ' + t('generic.yearsPlural'),
+        skillLevel: t('generic.intermediate'),
+        description: t('programmingLanguagesSection.frontend'),
     },
     {
         name: ['Java'],
         icon: ['/icons/java/java-original.svg'],
         proficiency: 80,
-        experience: '3+ years',
-        skillLevel: 'Advanced',
-        description: 'Backend development & microservices',
+        experience: '3+ ' + t('generic.yearsPlural'),
+        skillLevel: t('generic.advanced'),
+        description: t('programmingLanguagesSection.backendMicroservices'),
     },
     {
         name: ['PostgreSQL', 'MySQL'],
@@ -311,9 +307,9 @@ export const programmingLanguages = [
             '/Liquibase.svg',
         ],
         proficiency: 85,
-        experience: '4+ years',
-        skillLevel: 'Advanced',
-        description: 'Persistence',
+        experience: '4+ ' + t('generic.yearsPlural'),
+        skillLevel: t('generic.advanced'),
+        description: t('programmingLanguagesSection.persistence'),
     },
     {
         name: ['Python', 'Node.js'],
@@ -322,8 +318,8 @@ export const programmingLanguages = [
             '/icons/nodejs/nodejs-original.svg',
         ],
         proficiency: 45,
-        skillLevel: 'Intermediate',
-        description: 'Scripting and automation',
+        skillLevel: t('generic.intermediate'),
+        description: t('programmingLanguagesSection.scripting'),
     },
     {
         name: ['React', 'Next.js'],
@@ -332,9 +328,9 @@ export const programmingLanguages = [
             '/icons/nextjs/nextjs-original.svg',
         ],
         proficiency: 50,
-        experience: '3+ years',
-        skillLevel: 'Intermediate',
-        description: 'Dynamic websites',
+        experience: '3+ ' + t('generic.yearsPlural'),
+        skillLevel: t('generic.intermediate'),
+        description: t('programmingLanguagesSection.dynamic'),
     },
     {
         name: ['JavaScript', 'TypeScript'],
@@ -343,9 +339,9 @@ export const programmingLanguages = [
             '/icons/typescript/typescript-original.svg',
         ],
         proficiency: 90,
-        experience: '4+ years',
-        skillLevel: 'Advanced',
-        description: 'Frontend development',
+        experience: '4+ ' + t('generic.yearsPlural'),
+        skillLevel: t('generic.advanced'),
+        description: t('programmingLanguagesSection.frontend'),
     },
     {
         name: ['C++', 'C'],
@@ -354,16 +350,16 @@ export const programmingLanguages = [
             '/icons/c/c-original.svg',
         ],
         proficiency: 35,
-        experience: '2 years',
-        skillLevel: 'Intermediate',
-        description: 'Backend development',
+        experience: '2 ' + t('generic.yearsPlural'),
+        skillLevel: t('generic.intermediate'),
+        description: t('programmingLanguagesSection.backend'),
     },
     {
         name: ['PHP'],
         icon: ['/icons/php/php-original.svg'],
         proficiency: 40,
-        skillLevel: 'Beginner',
-        description: 'Backend development',
+        skillLevel: t('generic.beginner'),
+        description: t('programmingLanguagesSection.backend'),
     },
     {
         name: ['HTML', 'CSS'],
@@ -372,33 +368,32 @@ export const programmingLanguages = [
             '/icons/css3/css3-original.svg',
         ],
         proficiency: 95,
-        experience: '4 years',
-        skillLevel: 'Advanced',
-        description: 'Static websites',
+        experience: '4 ' + t('generic.yearsPlural'),
+        skillLevel: t('generic.advanced'),
+        description: t('programmingLanguagesSection.static'),
     },
     {
         name: ['Docker'],
         icon: ['/icons/docker/docker-original.svg'],
         proficiency: 60,
-        experience: '3+ years',
-        skillLevel: 'Intermediate',
-        description: 'Containerization',
+        experience: '3+ ' + t('generic.yearsPlural'),
+        skillLevel: t('generic.intermediate'),
+        description: t('programmingLanguagesSection.containerization'),
     },
     {
         name: ['Git', 'Jira'],
         icon: ['/icons/git/git-original.svg', '/icons/jira/jira-original.svg'],
         proficiency: 90,
-        experience: '3+ years',
-        skillLevel: 'Advanced',
-        description: 'Version control and project management',
+        experience: '3+ ' + t('generic.yearsPlural'),
+        skillLevel: t('generic.advanced'),
+        description: t('programmingLanguagesSection.versionControl'),
     },
     {
         name: ['MongoDB'],
         icon: ['/icons/mongodb/mongodb-original.svg'],
         proficiency: 20,
-        experience: '1 year',
-        skillLevel: 'Beginner',
-        description: 'NoSQL databases',
+        skillLevel: t('generic.beginner'),
+        description: t('programmingLanguagesSection.nosql'),
     },
 ];
 

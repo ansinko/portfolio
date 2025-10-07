@@ -16,7 +16,7 @@ const ProgrammingLanguages = () => {
                 }}
             />
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-4'>
-                {programmingLanguages.map((lang, index) => (
+                {programmingLanguages(t).map((lang, index) => (
                     <div
                         key={index}
                         className='relative p-6 rounded-3xl border border-white/[0.1] bg-black-100 hover:shadow-xl transition duration-200 group'

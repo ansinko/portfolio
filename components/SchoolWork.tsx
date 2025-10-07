@@ -14,7 +14,7 @@ const SchoolWork = () => {
                 dangerouslySetInnerHTML={{ __html: t('schoolWork.title') }}
             />
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-4'>
-                {schoolWork.map(item => (
+                {schoolWork(t).map(item => (
                     <ProjectCard
                         key={item.id}
                         title={item.title}

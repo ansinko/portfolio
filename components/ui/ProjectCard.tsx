@@ -6,6 +6,7 @@ import { FaExternalLinkAlt, FaTimes } from 'react-icons/fa';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ProjectCardProps {
     title: string;
@@ -31,7 +32,7 @@ const ProjectCard = ({
     className,
 }: ProjectCardProps) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-
+    const { t } = useLanguage();
     const handleCardClick = () => {
         setIsModalOpen(true);
         // Hide floating navbar when modal opens
@@ -157,7 +158,7 @@ const ProjectCard = ({
                                 </a>
                             ) : (
                                 <div className='flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white-100 flex-1 text-sm font-medium'>
-                                    More information soon...
+                                    {t('generic.moreInfo')}
                                 </div>
                             )}
 
@@ -244,7 +245,7 @@ const ProjectCard = ({
                                     {/* Full Description */}
                                     <div className='space-y-2'>
                                         <h3 className='text-lg font-semibold text-purple'>
-                                            Popis projektu
+                                            {t('generic.projectDesc')}
                                         </h3>
                                         <p
                                             className='text-white-100 leading-relaxed'
@@ -257,7 +258,7 @@ const ProjectCard = ({
                                     {/* Technologies */}
                                     <div className='space-y-3'>
                                         <h3 className='text-lg font-semibold text-purple'>
-                                            Použité technológie
+                                            {t('generic.usedTechnologies')}
                                         </h3>
                                         <div className='flex flex-wrap gap-3'>
                                             {technologies.map((icon, index) => (
@@ -287,7 +288,7 @@ const ProjectCard = ({
                                                 className='flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white-100 hover:bg-purple/20 hover:border-purple/30 hover:text-purple transition-all duration-200 font-medium'
                                             >
                                                 <FaGithub size={16} />
-                                                GitHub Repository
+                                                {t('generic.githubRepo')}
                                             </a>
                                         )}
 
@@ -299,7 +300,7 @@ const ProjectCard = ({
                                                 className='flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 hover:border-blue-500/50 transition-all duration-200 font-medium'
                                             >
                                                 <FaExternalLinkAlt size={14} />
-                                                Live Demo
+                                                {t('generic.liveDemo')}
                                             </a>
                                         )}
                                     </div>

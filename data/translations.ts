@@ -2,6 +2,15 @@ export const translations = {
     en: {
         generic: {
             present: 'present',
+            yearsPlural: 'years',
+            beginner: 'Beginner',
+            intermediate: 'Intermediate',
+            advanced: 'Advanced',
+            projectDesc: 'Project Description',
+            usedTechnologies: 'Technologies Used',
+            githubRepo: 'GitHub Repository',
+            liveDemo: 'Live Demo',
+            moreInfo: 'More information soon...',
         },
         hero: {
             title: 'Andrej Meliška - Software Developer',
@@ -86,11 +95,66 @@ export const translations = {
             },
         },
         projects: {
-            title: 'A small selection of recent projects',
+            project1: {
+                title: 'Classroom Reservation System',
+                des: 'A classroom reservation system implemented in PHP focusing on managing rooms and reservations.',
+            },
+            project2: {
+                title: 'Analysis and Decomposition of a Monolithic Information System',
+                des: "This bachelor's thesis analyzes a monolithic information system with modular business logic to select a suitable module for decomposition and transform it into an independently deployable module. The module is then separated, reworked into a standalone microservice, and integrated back into the original system using the REST architectural style. User verification is secured with JWT. The result is a fully functional and deployable eDocuments microservice, improving flexibility, scalability, and extensibility of the system while laying the foundation for future module decomposition.",
+            },
+            project3: {
+                title: 'Java Project Dependency Generator Tool',
+                des: 'This tool analyzes the source code of a Java project, identifies dependencies for each class, and generates a list in Mermaid format for visualization.',
+            },
+            project4: {
+                title: 'Modern Data Formats in Practice',
+                des: 'Project for the BI-MDF course focused on modeling data and representing it in various formats (RDF, SPARQL, JSON, CSV, XML), including querying and transformations.',
+            },
+            project5: {
+                title: 'Big Data Analytics',
+                des: 'Semester project focused on processing and analyzing Big Data using MongoDB, Elasticsearch, and Kibana. Explored relationships and correlations on selected datasets, visualized in Kibana.',
+            },
+            project6: {
+                title: 'About Me Website',
+                des: 'A personal website from the BI-ZWU course where I learned the basics of user-centric web design and practiced HTML and CSS.',
+            },
+            project7: {
+                title: 'The Drake',
+                des: 'Implementation of the board game The Drake (inspired by The Duke) for two players in Java. Simplified version with smaller board and adapted rules.',
+            },
+            project8: {
+                title: 'PHP Projects',
+                des: 'A collection of PHP projects where I practiced OOP, Composer, REST API, ORM, data persistence, scraping, and unit testing.',
+            },
+            project9: {
+                title: 'Product Recommendation App',
+                des: 'Web application recommending products to users based on collaborative filtering and similarity to other users.',
+            },
+            project10: {
+                title: 'Goodgame Empire Mini',
+                des: 'A strategy-building game in C++ where the player competes against AI to acquire the most buildings or resources.',
+            },
+            project11: {
+                title: 'C++ Projects',
+                des: 'Repository containing all my C++ codes – from ProgTest homework to exam preparation.',
+            },
+            project12: {
+                title: 'C Projects',
+                des: 'Repository with my C codes – from ProgTest homework to small programs that helped me learn programming basics.',
+            },
         },
+
         programmingLanguagesSection: {
-            years: 'years',
-            projects: 'projects',
+            frontend: 'Frontend development',
+            backendMicroservices: 'Backend development & microservices',
+            backend: 'Backend development',
+            persistence: 'Persistence',
+            containerization: 'Containerization',
+            dynamic: 'Dynamic websites',
+            scripting: 'Scripting and automation',
+            versionControl: 'Version control and project management',
+            nosql: 'NoSQL databases',
         },
         footer: {
             title: "Looking for a <span class='text-purple'>motivated developer</span> to join your team?",
@@ -104,6 +168,15 @@ export const translations = {
     sk: {
         generic: {
             present: 'súčasnosť',
+            yearsPlural: 'roky',
+            beginner: 'Začiatočník',
+            intermediate: 'Stredne pokročilý',
+            advanced: 'Pokročilý',
+            projectDesc: 'Popis projektu',
+            usedTechnologies: 'Použité technológie',
+            githubRepo: 'GitHub Repozitár',
+            liveDemo: 'Live Demo',
+            moreInfo: 'Ďalšie informácie čoskoro...',
         },
         hero: {
             title: 'Andrej Meliška - Softvérový vývojár',
@@ -197,21 +270,70 @@ export const translations = {
             },
         },
         projects: {
-            title: 'Malý výber nedávnych projektov',
+            project1: {
+                title: 'Rezervačný systém učební',
+                des: 'Rezervačný systém učební implementovaný v PHP s dôrazom na správu miestností a rezervácií.',
+            },
+            project2: {
+                title: 'Analýza a dekompozícia monolitického informačného systému',
+                des: 'V tejto bakalárskej práci je analyzovaný monolitický informačný systém s modulárnou biznis logikou za účelom výberu vhodného modulu na dekompozíciu a jeho transformáciu na samostatne nasaditeľný modul. Následne je tento modul oddelený, prepracovaný do podoby samostatnej mikroslužby a integrovaný späť do pôvodného systému prostredníctvom architektonického štýlu REST. Pri komunikácii s používateľským rozhraním je overenie používateľa zabezpečené pomocou JWT. Výsledkom práce je plne funkčná a nasaditeľná mikroslužba eDokumenty, pričom prínosom práce je zvýšenie flexibility, škálovateľnosti a rozšíriteľnosti systému a vytvorenie základu pre budúcu dekompozíciu ďalších modulov systému.',
+            },
+            project3: {
+                title: 'Nástroj na generovanie závislostí v Java projekte',
+                des: 'Tento nástroj analyzuje zdrojový kód Java projektu, identifikuje závislosti pre každú triedu a generuje zoznam vo formáte Mermaid na vizualizáciu.',
+            },
+            project4: {
+                title: 'Moderné dátové formáty v praxi',
+                des: 'Projekt v rámci predmetu BI-MDF zameraný na modelovanie dát a ich reprezentáciu v rôznych formátoch (RDF, SPARQL, JSON, CSV, XML), vrátane dotazovania a transformácií.',
+            },
+            project5: {
+                title: 'Big Data Analytika',
+                des: 'Semestrálna práca zameraná na spracovanie a analýzu Big Data s využitím MongoDB, Elasticsearch a Kibany. Na vybraných datasetoch som skúmal prepojenia a korelácie, ktoré som vizualizoval v Kibane.',
+            },
+            project6: {
+                title: 'Stránka o mne',
+                des: 'Stránka o mne z predmetu BI-ZWU, kde som sa naučil základné koncepty návrhu webového rozhrania z pohľadu používateľa a osvojil si HTML a CSS.',
+            },
+            project7: {
+                title: 'The Drake',
+                des: 'Implementácia stolnej hry The Drake (inšpirovanej hrou The Duke) pre dvoch hráčov v Jave. Zjednodušená verzia s menším hracím plánom a prispôsobenými pravidlami.',
+            },
+            project8: {
+                title: 'PHP projekty',
+                des: 'Súbor PHP projektov, na ktorých som si prakticky vyskúšal OOP, Composer, REST API, ORM, perzistenciu dát, scraping a unit testing.',
+            },
+            project9: {
+                title: 'Aplikácia na odporúčanie produktov',
+                des: 'Webová aplikácia odporúčajúca produkty používateľovi na základe kolaboratívneho filtrovania a podobnosti s inými používateľmi.',
+            },
+            project10: {
+                title: 'Goodgame Empire Mini',
+                des: 'Strategická budovateľská hra v C++, kde hráč súťaží proti AI. Cieľom je získať čo najviac budov alebo zdrojov.',
+            },
+            project11: {
+                title: 'C++ projekty',
+                des: 'Repozitár obsahujúci všetky moje C++ kódy – od domácich úloh z ProgTestu až po prípravu na skúšky.',
+            },
+            project12: {
+                title: 'C projekty',
+                des: 'Repozitár s mojimi C kódmi – od domácich úloh z ProgTestu až po menšie programy, ktoré mi pomohli osvojiť si základy programovania.',
+            },
         },
         programmingLanguagesSection: {
-            javascript: 'JavaScript',
-            typescript: 'TypeScript',
-            python: 'Python',
-            java: 'Java',
-            cpp: 'C++',
-            sql: 'SQL',
-            years: 'rokov',
-            projects: 'projektov',
+            frontend: 'Frontend vývoj',
+            backend: 'Backend vývoj',
+            backendMicroservices: 'Backend vývoj a mikroslužby',
+            persistence: 'Perzistencia (uchovávanie dát)',
+            containerization: 'Kontajnerizácia',
+            dynamic: 'Dynamické webové stránky',
+            static: 'Statické webové stránky',
+            scripting: 'Skriptovanie a automatizácia',
+            versionControl: 'Správa verzií a projektov',
+            nosql: 'NoSQL databázy',
         },
         footer: {
             title: "Hľadáte <span class='text-purple'>motivovaného vývojára</span> do svojho tímu?",
-            description: `Som vždy otvorený novým príležitostiam, kde sa môžem učiť,
+            description: `Vždy som otvorený novým príležitostiam, kde sa môžem učiť,
                     rásť a prispievať svojimi schopnosťami. <br />
                     Ak vás môj profil zaujal, rád sa s vami spojím a porozprávame sa,
                     ako môžem priniesť hodnotu vašej spoločnosti.`,
