@@ -199,7 +199,6 @@ export const schoolWork = (t: (key: string) => string) => [
         category: 'BI-ZWU',
         year: '2023',
         img: '/school-projects/about-me-web.png',
-        demo: 'https://andrej.meliska.sk/',
     },
     {
         id: 7,
@@ -357,7 +356,7 @@ export const programmingLanguages = (t: (key: string) => string) => [
     {
         name: ['PHP'],
         icon: ['/icons/php/php-original.svg'],
-        proficiency: 40,
+        proficiency: 20,
         skillLevel: t('generic.beginner'),
         description: t('programmingLanguagesSection.backend'),
     },

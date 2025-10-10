@@ -15,8 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'Andrej Meliška',
-    description: 'Personal website portfolio of Andrej Meliška',
+    title: 'Andrej Meliška | Software Developer',
+    description:
+        'Portfolio of Andrej Meliška, a software developer and student at FIT CTU.',
+    icons: {
+        icon: '/icons/icons8-portfolio-16.png',
+        shortcut: '/icons/icons8-portfolio-16.png',
+        apple: '/icons/icons8-portfolio-16.png',
+    },
 };
 
 export default function RootLayout({
