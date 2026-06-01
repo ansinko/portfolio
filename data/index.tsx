@@ -312,26 +312,37 @@ export const schoolWork = (t: T): SchoolWorkItem[] => {
     return items.sort((a, b) => Number(b.year) - Number(a.year));
 };
 
-interface ProgLang {
+export type SkillTier = 'core' | 'comfortable' | 'familiar';
+
+export interface ProgLang {
     name: string[];
     icon: string[];
-    proficiency: number;
+    tier: SkillTier;
+    topic: string;
     experience?: string;
-    skillLevel: string;
-    description: string;
+    context?: string;
 }
 
 export const programmingLanguages = (t: T): ProgLang[] => {
     const years = (n: number) => `${n}+ ${t('generic.yearsPlural')}`;
 
-    const langs: ProgLang[] = [
+    return [
+        // Core — daily use at work / personal projects
         {
             name: ['Java'],
             icon: ['/icons/java/java-original.svg'],
-            proficiency: 80,
+            tier: 'core',
+            topic: t('programmingLanguagesSection.backendMicroservices'),
             experience: years(2),
-            skillLevel: t('generic.advanced'),
-            description: t('programmingLanguagesSection.backendMicroservices'),
+            context: t('programmingLanguages.context.workInnovis'),
+        },
+        {
+            name: ['Angular'],
+            icon: ['/icons/angular/angular-original.svg'],
+            tier: 'core',
+            topic: t('programmingLanguagesSection.frontend'),
+            experience: years(2),
+            context: t('programmingLanguages.context.workInnovis'),
         },
         {
             name: ['JavaScript', 'TypeScript'],
@@ -339,10 +350,10 @@ export const programmingLanguages = (t: T): ProgLang[] => {
                 '/icons/javascript/javascript-original.svg',
                 '/icons/typescript/typescript-original.svg',
             ],
-            proficiency: 80,
+            tier: 'core',
+            topic: t('programmingLanguagesSection.frontend'),
             experience: years(3),
-            skillLevel: t('generic.advanced'),
-            description: t('programmingLanguagesSection.frontend'),
+            context: t('programmingLanguages.context.workInnovis'),
         },
         {
             name: ['PostgreSQL', 'MySQL'],
@@ -351,18 +362,18 @@ export const programmingLanguages = (t: T): ProgLang[] => {
                 '/icons/mysql/mysql-original.svg',
                 '/Liquibase.svg',
             ],
-            proficiency: 80,
+            tier: 'core',
+            topic: t('programmingLanguagesSection.persistence'),
             experience: years(2),
-            skillLevel: t('generic.advanced'),
-            description: t('programmingLanguagesSection.persistence'),
+            context: t('programmingLanguages.context.workInnovis'),
         },
         {
             name: ['Git', 'Jira'],
             icon: ['/icons/git/git-original.svg', '/icons/jira/jira-original.svg'],
-            proficiency: 80,
+            tier: 'core',
+            topic: t('programmingLanguagesSection.versionControl'),
             experience: years(2),
-            skillLevel: t('generic.advanced'),
-            description: t('programmingLanguagesSection.versionControl'),
+            context: t('programmingLanguages.context.workInnovis'),
         },
         {
             name: ['HTML', 'CSS'],
@@ -370,37 +381,30 @@ export const programmingLanguages = (t: T): ProgLang[] => {
                 '/icons/html5/html5-original.svg',
                 '/icons/css3/css3-original.svg',
             ],
-            proficiency: 80,
+            tier: 'core',
+            topic: t('programmingLanguagesSection.static'),
             experience: years(3),
-            skillLevel: t('generic.advanced'),
-            description: t('programmingLanguagesSection.static'),
         },
-        {
-            name: ['Angular'],
-            icon: ['/icons/angular/angular-original.svg'],
-            proficiency: 60,
-            experience: years(2),
-            skillLevel: t('generic.intermediate'),
-            description: t('programmingLanguagesSection.frontend'),
-        },
-        {
-            name: ['Docker'],
-            icon: ['/icons/docker/docker-original.svg'],
-            proficiency: 55,
-            experience: years(1),
-            skillLevel: t('generic.intermediate'),
-            description: t('programmingLanguagesSection.containerization'),
-        },
+
+        // Comfortable — solid working knowledge from projects
         {
             name: ['React', 'Next.js'],
             icon: [
                 '/icons/react/react-original.svg',
                 '/icons/nextjs/nextjs-original.svg',
             ],
-            proficiency: 45,
+            tier: 'comfortable',
+            topic: t('programmingLanguagesSection.dynamic'),
             experience: years(1),
-            skillLevel: t('generic.intermediate'),
-            description: t('programmingLanguagesSection.dynamic'),
+            context: t('programmingLanguages.context.sideProjects'),
+        },
+        {
+            name: ['Docker'],
+            icon: ['/icons/docker/docker-original.svg'],
+            tier: 'comfortable',
+            topic: t('programmingLanguagesSection.containerization'),
+            experience: years(1),
+            context: t('programmingLanguages.context.sideProjects'),
         },
         {
             name: ['Python', 'Node.js'],
@@ -408,40 +412,38 @@ export const programmingLanguages = (t: T): ProgLang[] => {
                 '/icons/python/python-original.svg',
                 '/icons/nodejs/nodejs-original.svg',
             ],
-            proficiency: 45,
+            tier: 'comfortable',
+            topic: t('programmingLanguagesSection.scripting'),
             experience: years(1),
-            skillLevel: t('generic.intermediate'),
-            description: t('programmingLanguagesSection.scripting'),
+            context: t('programmingLanguages.context.sideProjects'),
         },
+
+        // Familiar / Learning — coursework or occasional
         {
             name: ['C++', 'C'],
             icon: [
                 '/icons/cplusplus/cplusplus-original.svg',
                 '/icons/c/c-original.svg',
             ],
-            proficiency: 35,
-            experience: years(1),
-            skillLevel: t('generic.intermediate'),
-            description: t('programmingLanguagesSection.backend'),
+            tier: 'familiar',
+            topic: t('programmingLanguagesSection.backend'),
+            context: t('programmingLanguages.context.coursework'),
         },
         {
             name: ['PHP'],
             icon: ['/icons/php/php-original.svg'],
-            proficiency: 20,
-            experience: years(1),
-            skillLevel: t('generic.beginner'),
-            description: t('programmingLanguagesSection.backend'),
+            tier: 'familiar',
+            topic: t('programmingLanguagesSection.backend'),
+            context: t('programmingLanguages.context.coursework'),
         },
         {
             name: ['MongoDB'],
             icon: ['/icons/mongodb/mongodb-original.svg'],
-            proficiency: 20,
-            skillLevel: t('generic.beginner'),
-            description: t('programmingLanguagesSection.nosql'),
+            tier: 'familiar',
+            topic: t('programmingLanguagesSection.nosql'),
+            context: t('programmingLanguages.context.coursework'),
         },
     ];
-
-    return langs;
 };
 
 export const socialMedia = [

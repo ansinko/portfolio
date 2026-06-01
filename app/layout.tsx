@@ -62,13 +62,14 @@ export default function RootLayout({
     children,
 }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang='en' className='scroll-smooth' suppressHydrationWarning>
+        <html lang='en' className='dark scroll-smooth' suppressHydrationWarning>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 <ThemeProvider
                     attribute='class'
                     defaultTheme='dark'
+                    forcedTheme='dark'
                     enableSystem={false}
                     disableTransitionOnChange
                 >

@@ -89,6 +89,20 @@ export const translations = {
         programmingLanguages: {
             title: '<span class="text-purple">Programming Languages</span> and Skills',
             experience: 'Experience',
+            tier: {
+                coreTitle: 'Core stack',
+                coreDesc: 'Tools I reach for daily at work and in personal projects.',
+                comfortableTitle: 'Comfortable with',
+                comfortableDesc: 'Solid working knowledge — used regularly in projects.',
+                familiarTitle: 'Familiar / Learning',
+                familiarDesc: 'Used occasionally or actively learning more.',
+            },
+            context: {
+                workInnovis: 'Daily at innovis',
+                sideProjects: 'Side projects',
+                coursework: 'University coursework',
+                learning: 'Actively learning',
+            },
         },
         projects: {
             project1: {
@@ -168,8 +182,8 @@ export const translations = {
             present: 'súčasnosť',
             yearsPlural: 'roky',
             beginner: 'Začiatočník',
-            intermediate: 'Pokročilý',
-            advanced: 'Expert',
+            intermediate: 'Stredne pokročilý',
+            advanced: 'Pokročilý',
             projectDesc: 'Popis projektu',
             usedTechnologies: 'Použité technológie',
             githubRepo: 'GitHub repozitár',
@@ -250,6 +264,20 @@ export const translations = {
         programmingLanguages: {
             title: '<span class="text-purple">Programovacie jazyky</span> a zručnosti',
             experience: 'Skúsenosti',
+            tier: {
+                coreTitle: 'Hlavný stack',
+                coreDesc: 'Nástroje, ktoré používam denne v práci aj na vlastných projektoch.',
+                comfortableTitle: 'Komfortne ovládam',
+                comfortableDesc: 'Solídna pracovná znalosť — pravidelne používam v projektoch.',
+                familiarTitle: 'Mám prehľad / Učím sa',
+                familiarDesc: 'Občasne používam alebo sa aktívne učím.',
+            },
+            context: {
+                workInnovis: 'Denne v innovis',
+                sideProjects: 'Side projekty',
+                coursework: 'Univerzitné kurzy',
+                learning: 'Aktívne sa učím',
+            },
         },
         projects: {
             project1: {

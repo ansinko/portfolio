@@ -28,7 +28,7 @@ const Footer = () => {
                     dangerouslySetInnerHTML={{ __html: t('footer.title') }}
                 />
                 <p
-                    className='text-white-200 md:mt-10 my-5 text-center max-w-2xl'
+                    className='text-white-200 md:mt-10 my-5 text-center max-w-2xl text-base md:text-lg lg:text-xl leading-relaxed'
                     dangerouslySetInnerHTML={{
                         __html: t('footer.description'),
                     }}
