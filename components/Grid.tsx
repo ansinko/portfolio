@@ -1,18 +1,19 @@
 'use client';
 
 import { gridItems } from '@/data';
-import { BentoGrid, BentoGridItem } from './ui/BentoGrid';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { BentoGrid, BentoGridItem } from './ui/BentoGrid';
 
 const Grid = () => {
     const { t } = useLanguage();
+
     return (
         <section id='about'>
-            <BentoGrid className='w-full py-20' t={t}>
-                {gridItems(t).map((item, i) => (
+            <BentoGrid className='w-full py-20'>
+                {gridItems(t).map(item => (
                     <BentoGridItem
+                        key={item.id}
                         id={item.id}
-                        key={i}
                         title={item.title}
                         description={item.description}
                         className={item.className}

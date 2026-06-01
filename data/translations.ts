@@ -1,3 +1,6 @@
+export type Language = 'en' | 'sk';
+export type T = (key: string) => string;
+
 export const translations = {
     en: {
         generic: {
@@ -10,49 +13,67 @@ export const translations = {
             usedTechnologies: 'Technologies Used',
             githubRepo: 'GitHub Repository',
             liveDemo: 'Live Demo',
-            moreInfo: 'More information soon...',
+            moreInfo: 'More information soon…',
         },
         hero: {
-            title: 'Andrej Meliška - Software Developer',
+            title: 'Andrej Meliška — Software Developer',
             subtitle: 'Bc. by paper, Dev. by passion',
             description:
                 'Software developer, sports enthusiast and student @ FIT CTU in Prague who brings ideas to life with code ✨',
-            button: 'My projects',
+            button: 'See my projects',
         },
         navigation: {
             about: 'About',
             projects: 'Projects',
             skills: 'Skills',
-            contact: 'Contact me',
+            contact: 'Contact',
         },
         about: {
             softSkills: {
                 name: 'Soft skills',
                 description:
-                    'I am a team player who likes challenges, is down to earth with a good sense of humour, communicates clearly, thinks critically, comes up with new ideas, and always finishes and delivers work on time',
+                    'Team player who enjoys challenges, communicates clearly, thinks critically, comes up with new ideas, and delivers work on time.',
             },
             workExperience: {
                 header: 'Work experience',
                 position: 'Junior Software Developer',
+                company: 'innovis, s.r.o.',
+                period: '2023 — present',
             },
             education: {
                 header: 'Education',
-                name: 'Czech Technical University in Prague',
                 field: 'Web Engineering',
+                entries: [
+                    {
+                        school: 'Czech Technical University in Prague',
+                        degree: 'Ing., FIT — Web Engineering',
+                        period: '2025 — present',
+                    },
+                    {
+                        school: 'Czech Technical University in Prague',
+                        degree: 'Bc., FIT — Web Engineering',
+                        period: '2021 — 2025',
+                    },
+                    {
+                        school: 'Evanjelické gymnázium J. A. Komenského',
+                        degree: 'Košice',
+                        period: '2013 — 2021',
+                    },
+                ],
             },
             techStack: {
                 header: 'My tech stack',
-                description: 'I constantly try to improve',
+                description: 'I constantly try to improve.',
             },
             likes: {
                 header: 'Do you like what you see so far?',
                 description: 'Show some love',
                 button: 'Give it a like',
-                thankYou: 'Thank You!',
+                thankYou: 'Thank you!',
             },
             domain: {
                 description:
-                    'I love automating workflows and building scripts in Python and Node.js to boost productivity and eliminate repetitive manual tasks.',
+                    'I love automating workflows and writing scripts in Python and Node.js to boost productivity and eliminate repetitive manual tasks.',
             },
             linkedin: {
                 title: 'Connect with me on LinkedIn',
@@ -61,38 +82,13 @@ export const translations = {
         },
         schoolWork: {
             title: 'My <span class="text-purple">School</span> and <span class="text-purple">Work</span> Projects',
+            archiveShow: 'Show older projects',
+            archiveHide: 'Hide older projects',
+            archiveHint: 'Early coursework from my first years at FIT',
         },
         programmingLanguages: {
             title: '<span class="text-purple">Programming Languages</span> and Skills',
             experience: 'Experience',
-        },
-        grid: {
-            about: {
-                title: 'About me',
-                description:
-                    'Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology',
-                experience: '1+',
-                projects: '20+',
-            },
-            linkedin: {
-                title: 'Connect with me on LinkedIn',
-            },
-            techStack: {
-                title: 'Tech stack',
-                description:
-                    'I constantly try to improve myself one problem at a time',
-            },
-            experience: {
-                title: 'Work Experience',
-                description:
-                    'I have gained valuable experience through hands-on projects',
-            },
-            like: {
-                title: 'Do you like what you see so far?',
-                description: 'Show some love',
-                button: 'Give it a like',
-                thankYou: 'Thank You!',
-            },
         },
         projects: {
             project1: {
@@ -100,36 +96,36 @@ export const translations = {
                 des: 'A classroom reservation system implemented in PHP focusing on managing rooms and reservations.',
             },
             project2: {
-                title: 'Analysis and Decomposition of a Monolithic Information System',
-                des: "This bachelor's thesis analyzes a monolithic information system with modular business logic to select a suitable module for decomposition and transform it into an independently deployable module. The module is then separated, reworked into a standalone microservice, and integrated back into the original system using the REST architectural style. User verification is secured with JWT. The result is a fully functional and deployable eDocuments microservice, improving flexibility, scalability, and extensibility of the system while laying the foundation for future module decomposition.",
+                title: "Bachelor's Thesis — Decomposition of a Monolithic Information System",
+                des: "This bachelor's thesis analyzes a monolithic information system with modular business logic to select a suitable module for decomposition and transform it into an independently deployable microservice. The new service is integrated back into the original system over REST, with JWT-secured user verification. The result is a fully functional eDocuments microservice, improving the system's flexibility, scalability, and extensibility, and laying the foundation for further decomposition.",
             },
             project3: {
-                title: 'Java Project Dependency Generator Tool',
-                des: 'This tool analyzes the source code of a Java project, identifies dependencies for each class, and generates a list in Mermaid format for visualization.',
+                title: 'Java Project Dependency Generator',
+                des: 'A tool that analyzes the source code of a Java project, identifies dependencies for each class, and generates a Mermaid diagram for easy visualization.',
             },
             project4: {
                 title: 'Modern Data Formats in Practice',
-                des: 'Project for the BI-MDF course focused on modeling data and representing it in various formats (RDF, SPARQL, JSON, CSV, XML), including querying and transformations.',
+                des: 'Project for BI-MDF focused on modeling data and representing it in various formats (RDF, SPARQL, JSON, CSV, XML), including querying and transformations.',
             },
             project5: {
                 title: 'Big Data Analytics',
-                des: 'Semester project focused on processing and analyzing Big Data using MongoDB, Elasticsearch, and Kibana. Explored relationships and correlations on selected datasets, visualized in Kibana.',
+                des: 'Semester project on processing and analyzing Big Data using MongoDB, Elasticsearch, and Kibana — exploring relationships and correlations on selected datasets visualized in Kibana.',
             },
             project6: {
                 title: 'About Me Website',
-                des: 'A personal website from the BI-ZWU course where I learned the basics of user-centric web design and practiced HTML and CSS.',
+                des: 'A personal website from BI-ZWU where I learned the basics of user-centric web design and practiced HTML and CSS.',
             },
             project7: {
                 title: 'The Drake',
-                des: 'Implementation of the board game The Drake (inspired by The Duke) for two players in Java. Simplified version with smaller board and adapted rules.',
+                des: 'Java implementation of the board game The Drake (inspired by The Duke) for two players — a simplified version with smaller board and adapted rules.',
             },
             project8: {
-                title: 'PHP Projects',
-                des: 'A collection of PHP projects where I practiced OOP, Composer, REST API, ORM, data persistence, scraping, and unit testing.',
+                title: 'PHP Mini-Projects',
+                des: 'Collection of PHP projects where I practiced OOP, Composer, REST APIs, ORM, persistence, scraping, and unit testing.',
             },
             project9: {
                 title: 'Product Recommendation App',
-                des: 'Web application recommending products to users based on collaborative filtering and similarity to other users.',
+                des: 'Web app recommending products to users based on collaborative filtering and similarity to other users.',
             },
             project10: {
                 title: 'Goodgame Empire Mini',
@@ -137,32 +133,34 @@ export const translations = {
             },
             project11: {
                 title: 'C++ Projects',
-                des: 'Repository containing all my C++ codes – from ProgTest homework to exam preparation.',
+                des: 'Repository containing all my C++ code — from ProgTest homework to exam preparation.',
             },
             project12: {
                 title: 'C Projects',
-                des: 'Repository with my C codes – from ProgTest homework to small programs that helped me learn programming basics.',
+                des: 'Repository with my C code — from ProgTest homework to small programs that helped me learn programming basics.',
+            },
+            project13: {
+                title: 'Prague Office Menu App',
+                des: 'A lunch menu discovery app that scrapes and displays daily restaurant menus for offices in Prague. Users vote on their preferred restaurant, with results shared in real time via Redis. Multi-office support secured per office. Built with Next.js 16, React 19, Tailwind 4, Vercel Blob, Upstash Redis, Leaflet maps, and GitHub Actions/Vercel cron jobs.',
             },
         },
-
         programmingLanguagesSection: {
             frontend: 'Frontend development',
-            backendMicroservices: 'Backend development & microservices',
+            backendMicroservices: 'Backend & microservices',
             backend: 'Backend development',
             persistence: 'Persistence',
             containerization: 'Containerization',
-            dynamic: 'Dynamic websites',
-            scripting: 'Scripting and automation',
-            versionControl: 'Version control and project management',
+            dynamic: 'Dynamic web apps',
+            static: 'Static websites',
+            scripting: 'Scripting & automation',
+            versionControl: 'Version control & project management',
             nosql: 'NoSQL databases',
         },
         footer: {
             title: "Looking for a <span class='text-purple'>motivated developer</span> to join your team?",
-            description: `I’m always open to new opportunities where I can learn,
-                    grow, and contribute with my skills. <br />
-                    If my profile caught your attention, I’d be glad to discuss
-                    how I can bring value to your company.`,
-            button: 'Get in touch with me',
+            description:
+                "I'm always open to new opportunities where I can learn, grow, and contribute. <br />If my profile caught your attention, I'd be glad to discuss how I can bring value to your company.",
+            button: 'Get in touch',
         },
     },
     sk: {
@@ -170,104 +168,88 @@ export const translations = {
             present: 'súčasnosť',
             yearsPlural: 'roky',
             beginner: 'Začiatočník',
-            intermediate: 'Stredne pokročilý',
-            advanced: 'Pokročilý',
+            intermediate: 'Pokročilý',
+            advanced: 'Expert',
             projectDesc: 'Popis projektu',
             usedTechnologies: 'Použité technológie',
-            githubRepo: 'GitHub Repozitár',
-            liveDemo: 'Live Demo',
-            moreInfo: 'Ďalšie informácie čoskoro...',
+            githubRepo: 'GitHub repozitár',
+            liveDemo: 'Live demo',
+            moreInfo: 'Ďalšie informácie čoskoro…',
         },
         hero: {
-            title: 'Andrej Meliška - Softvérový vývojár',
+            title: 'Andrej Meliška — Softvérový vývojár',
             subtitle: 'Bc. na papieri, Dev. z vášne',
             description:
                 'Softvérový vývojár, športový nadšenec a študent @ FIT ČVUT v Prahe, ktorý privádza nápady k životu pomocou kódu ✨',
-            button: 'Moje projekty',
+            button: 'Pozri moje projekty',
         },
         navigation: {
             about: 'O mne',
             projects: 'Projekty',
             skills: 'Zručnosti',
-            contact: 'Kontaktuj ma',
+            contact: 'Kontakt',
         },
         about: {
             softSkills: {
                 name: 'Soft skills',
                 description:
-                    'Som tímový hráč, ktorý má rád výzvy, je nohami pevne na zemi, má dobrý zmysel pre humor, komunikuje jasne, kriticky premýšľa, prichádza s novými nápadmi a vždy dokončí a odovzdá prácu načas.',
+                    'Tímový hráč, ktorý má rád výzvy, komunikuje jasne, kriticky premýšľa, prichádza s novými nápadmi a vždy odovzdá prácu načas.',
             },
             workExperience: {
                 header: 'Pracovné skúsenosti',
                 position: 'Junior softvérový vývojár',
+                company: 'innovis, s.r.o.',
+                period: '2023 — súčasnosť',
             },
             education: {
                 header: 'Vzdelanie',
-                name: 'České vysoké učenie technické v Prahe',
                 field: 'Webové inžinierstvo',
+                entries: [
+                    {
+                        school: 'České vysoké učení technické v Prahe',
+                        degree: 'Ing., FIT — Webové inžinierstvo',
+                        period: '2025 — súčasnosť',
+                    },
+                    {
+                        school: 'České vysoké učení technické v Prahe',
+                        degree: 'Bc., FIT — Webové inžinierstvo',
+                        period: '2021 — 2025',
+                    },
+                    {
+                        school: 'Evanjelické gymnázium J. A. Komenského',
+                        degree: 'Košice',
+                        period: '2013 — 2021',
+                    },
+                ],
             },
             techStack: {
-                header: 'Môj technologický stack',
-                description: 'Neustále sa snažím zlepšovať',
+                header: 'Môj tech stack',
+                description: 'Neustále sa snažím zlepšovať.',
             },
             likes: {
-                header: 'Páči sa vám, čo zatiaľ vidíte?',
-                description: 'Prejavte lásku',
-                button: 'Dajte like',
+                header: 'Páči sa ti, čo zatiaľ vidíš?',
+                description: 'Daj like',
+                button: 'Daj like',
                 thankYou: 'Ďakujem!',
             },
             domain: {
                 description:
-                    'Rád automatizujem pracovné postupy a vytváram skripty v Pythone a Node.js na zvýšenie produktivity a odstránenie opakovaných manuálnych úloh.',
+                    'Rád automatizujem pracovné postupy a píšem skripty v Pythone a Node.js, aby som zvýšil produktivitu a eliminoval opakované manuálne úlohy.',
             },
             linkedin: {
-                title: 'Spojte sa so mnou na LinkedIne',
-                visit: 'Navštívte môj LinkedIn →',
+                title: 'Spoj sa so mnou na LinkedIne',
+                visit: 'Navštív môj LinkedIn →',
             },
         },
         schoolWork: {
-            title: 'Moje <span class="text-purple">Školské</span> a <span class="text-purple">Pracovné</span> Projekty',
+            title: 'Moje <span class="text-purple">školské</span> a <span class="text-purple">pracovné</span> projekty',
+            archiveShow: 'Zobraziť staršie projekty',
+            archiveHide: 'Skryť staršie projekty',
+            archiveHint: 'Začiatky štúdia z prvých rokov na FIT',
         },
         programmingLanguages: {
             title: '<span class="text-purple">Programovacie jazyky</span> a zručnosti',
             experience: 'Skúsenosti',
-        },
-        grid: {
-            about: {
-                title: 'O mne',
-                description:
-                    'Tu nájdete viac informácií o mne, čo robím a moje súčasné zručnosti hlavne v oblasti programovania a technológie',
-                experience: '1+',
-                projects: '20+',
-            },
-            linkedin: {
-                title: 'Spojte sa so mnou na LinkedIn',
-                description:
-                    'Tímový hráč • Riešiteľ problémov • Rýchly študent • Komunikačné zručnosti',
-            },
-            techStack: {
-                title: 'Technologický stack',
-                description:
-                    'Neustále sa snažím zlepšovať jeden problém za druhým',
-            },
-            education: {
-                title: 'Technologický nadšenec s vášňou pre vývoj.',
-                description: 'Zistite viac na mojom LinkedIn',
-                bachelor: 'Bakalár počítačovej vedy',
-                university: 'České vysoké učení technické v Prahe',
-                year: '2023 - 2026',
-            },
-            experience: {
-                title: 'Pracovné skúsenosti',
-                description:
-                    'Získal som cenné skúsenosti prostredníctvom praktických projektov',
-            },
-            like: {
-                title: 'Páči sa vám to, čo zatiaľ vidíte?',
-                description: 'Prekažte lásku',
-                button: 'Dajte to lajk',
-                thankYou: 'Ďakujem!',
-            },
         },
         projects: {
             project1: {
@@ -275,19 +257,19 @@ export const translations = {
                 des: 'Rezervačný systém učební implementovaný v PHP s dôrazom na správu miestností a rezervácií.',
             },
             project2: {
-                title: 'Analýza a dekompozícia monolitického informačného systému',
-                des: 'V tejto bakalárskej práci je analyzovaný monolitický informačný systém s modulárnou biznis logikou za účelom výberu vhodného modulu na dekompozíciu a jeho transformáciu na samostatne nasaditeľný modul. Následne je tento modul oddelený, prepracovaný do podoby samostatnej mikroslužby a integrovaný späť do pôvodného systému prostredníctvom architektonického štýlu REST. Pri komunikácii s používateľským rozhraním je overenie používateľa zabezpečené pomocou JWT. Výsledkom práce je plne funkčná a nasaditeľná mikroslužba eDokumenty, pričom prínosom práce je zvýšenie flexibility, škálovateľnosti a rozšíriteľnosti systému a vytvorenie základu pre budúcu dekompozíciu ďalších modulov systému.',
+                title: 'Bakalárska práca — Dekompozícia monolitického informačného systému',
+                des: 'V tejto bakalárskej práci je analyzovaný monolitický informačný systém s modulárnou biznis logikou za účelom výberu vhodného modulu na dekompozíciu a jeho transformáciu na samostatne nasaditeľnú mikroslužbu. Mikroslužba je integrovaná späť do pôvodného systému prostredníctvom REST architektúry s overením používateľa cez JWT. Výsledkom je plne funkčná mikroslužba eDokumenty, ktorá zvyšuje flexibilitu, škálovateľnosť a rozšíriteľnosť systému a vytvára základ pre budúcu dekompozíciu ďalších modulov.',
             },
             project3: {
-                title: 'Nástroj na generovanie závislostí v Java projekte',
-                des: 'Tento nástroj analyzuje zdrojový kód Java projektu, identifikuje závislosti pre každú triedu a generuje zoznam vo formáte Mermaid na vizualizáciu.',
+                title: 'Generátor závislostí v Java projekte',
+                des: 'Nástroj, ktorý analyzuje zdrojový kód Java projektu, identifikuje závislosti pre každú triedu a generuje Mermaid diagram na vizualizáciu.',
             },
             project4: {
                 title: 'Moderné dátové formáty v praxi',
-                des: 'Projekt v rámci predmetu BI-MDF zameraný na modelovanie dát a ich reprezentáciu v rôznych formátoch (RDF, SPARQL, JSON, CSV, XML), vrátane dotazovania a transformácií.',
+                des: 'Projekt v rámci BI-MDF zameraný na modelovanie dát a ich reprezentáciu v rôznych formátoch (RDF, SPARQL, JSON, CSV, XML), vrátane dotazovania a transformácií.',
             },
             project5: {
-                title: 'Big Data Analytika',
+                title: 'Big Data analytika',
                 des: 'Semestrálna práca zameraná na spracovanie a analýzu Big Data s využitím MongoDB, Elasticsearch a Kibany. Na vybraných datasetoch som skúmal prepojenia a korelácie, ktoré som vizualizoval v Kibane.',
             },
             project6: {
@@ -296,10 +278,10 @@ export const translations = {
             },
             project7: {
                 title: 'The Drake',
-                des: 'Implementácia stolnej hry The Drake (inšpirovanej hrou The Duke) pre dvoch hráčov v Jave. Zjednodušená verzia s menším hracím plánom a prispôsobenými pravidlami.',
+                des: 'Implementácia stolnej hry The Drake (inšpirovanej hrou The Duke) pre dvoch hráčov v Jave — zjednodušená verzia s menším hracím plánom a prispôsobenými pravidlami.',
             },
             project8: {
-                title: 'PHP projekty',
+                title: 'PHP mini-projekty',
                 des: 'Súbor PHP projektov, na ktorých som si prakticky vyskúšal OOP, Composer, REST API, ORM, perzistenciu dát, scraping a unit testing.',
             },
             project9: {
@@ -312,20 +294,24 @@ export const translations = {
             },
             project11: {
                 title: 'C++ projekty',
-                des: 'Repozitár obsahujúci všetky moje C++ kódy – od domácich úloh z ProgTestu až po prípravu na skúšky.',
+                des: 'Repozitár obsahujúci všetky moje C++ kódy — od domácich úloh z ProgTestu až po prípravu na skúšky.',
             },
             project12: {
                 title: 'C projekty',
-                des: 'Repozitár s mojimi C kódmi – od domácich úloh z ProgTestu až po menšie programy, ktoré mi pomohli osvojiť si základy programovania.',
+                des: 'Repozitár s mojimi C kódmi — od domácich úloh z ProgTestu až po menšie programy, ktoré mi pomohli osvojiť si základy programovania.',
+            },
+            project13: {
+                title: 'Prague Office Menu App',
+                des: 'Aplikácia na zisťovanie obedového menu, ktorá scrapuje a zobrazuje denné menu reštaurácií v okolí kancelárií v Prahe. Používatelia hlasujú za svoju obľúbenú reštauráciu, výsledky sa zdieľajú v reálnom čase cez Redis. Podpora viacerých kancelárií, každá chránená heslom. Postavené na Next.js 16, React 19, Tailwind 4, Vercel Blob, Upstash Redis, Leaflet a GitHub Actions/Vercel cron jobs.',
             },
         },
         programmingLanguagesSection: {
             frontend: 'Frontend vývoj',
             backend: 'Backend vývoj',
-            backendMicroservices: 'Backend vývoj a mikroslužby',
-            persistence: 'Perzistencia (uchovávanie dát)',
+            backendMicroservices: 'Backend a mikroslužby',
+            persistence: 'Perzistencia',
             containerization: 'Kontajnerizácia',
-            dynamic: 'Dynamické webové stránky',
+            dynamic: 'Dynamické web aplikácie',
             static: 'Statické webové stránky',
             scripting: 'Skriptovanie a automatizácia',
             versionControl: 'Správa verzií a projektov',
@@ -333,14 +319,9 @@ export const translations = {
         },
         footer: {
             title: "Hľadáte <span class='text-purple'>motivovaného vývojára</span> do svojho tímu?",
-            description: `Vždy som otvorený novým príležitostiam, kde sa môžem učiť,
-                    rásť a prispievať svojimi schopnosťami. <br />
-                    Ak vás môj profil zaujal, rád sa s vami spojím a porozprávame sa,
-                    ako môžem priniesť hodnotu vašej spoločnosti.`,
+            description:
+                'Vždy som otvorený novým príležitostiam, kde sa môžem učiť, rásť a prispievať svojimi schopnosťami. <br />Ak vás môj profil zaujal, rád sa s vami spojím a porozprávame sa, ako môžem priniesť hodnotu vašej spoločnosti.',
             button: 'Kontaktujte ma',
         },
     },
-};
-
-export type Language = 'en' | 'cs' | 'sk';
-export type TranslationKey = keyof typeof translations.en;
+} as const;

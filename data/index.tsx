@@ -4,37 +4,28 @@ import {
     FaGraduationCap,
     FaEnvelope,
 } from 'react-icons/fa6';
+import type { T } from './translations';
 
-export const getNavItems = (t: (key: string) => string) => [
-    {
-        name: t('navigation.about'),
-        link: '#about',
-        icon: <FaPerson />,
-    },
+export const getNavItems = (t: T) => [
+    { name: t('navigation.about'), link: '#about', icon: <FaPerson /> },
     {
         name: t('navigation.projects'),
         link: '#projects',
-        icon: (
-            <FaDiagramProject className='h-4 w-4 text-neutral-500 dark:text-white' />
-        ),
+        icon: <FaDiagramProject />,
     },
     {
         name: t('navigation.skills'),
         link: '#skills',
-        icon: (
-            <FaGraduationCap className='h-4 w-4 text-neutral-500 dark:text-white' />
-        ),
+        icon: <FaGraduationCap />,
     },
     {
         name: t('navigation.contact'),
         link: '#contact',
-        icon: (
-            <FaEnvelope className='h-4 w-4 text-neutral-500 dark:text-white' />
-        ),
+        icon: <FaEnvelope />,
     },
 ];
 
-export const gridItems = (t: (key: string) => string) => [
+export const gridItems = (t: T) => [
     {
         id: 1,
         title: t('about.softSkills.description'),
@@ -75,7 +66,6 @@ export const gridItems = (t: (key: string) => string) => [
         img: '/grid.svg',
         spareImg: '/b4.svg',
     },
-
     {
         id: 5,
         title: t('about.domain.description'),
@@ -105,291 +95,354 @@ export const gridItems = (t: (key: string) => string) => [
         titleClassName: 'justify-start',
         img: '',
         spareImg: '',
-        link: 'https://www.linkedin.com/in/andrej-meliska-15278026b/',
+        link: 'https://www.linkedin.com/in/andrej-meli%C5%A1ka-15278026b/',
     },
 ];
 
-export const schoolWork = (t: (key: string) => string) => [
-    {
-        id: 1,
-        title: t('projects.project1.title'),
-        des: t('projects.project1.des'),
-        iconLists: [
-            '/icons/php/php-original.svg',
-            '/icons/symfony/symfony-original.svg',
-            '/icons/javascript/javascript-original.svg',
-            '/icons/postgresql/postgresql-original.svg',
-            '/icons/docker/docker-original.svg',
-            '/icons/postman/postman-original.svg',
-            '/icons/git/git-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/room-reservations-app',
-        category: 'BI-TWA',
-        year: '2023',
-        img: '/school-projects/reservations-app.png',
-    },
-    {
-        id: 2,
-        title: t('projects.project2.title'),
-        des: t('projects.project2.des'),
-        iconLists: [
-            '/icons/angular/angular-original.svg',
-            '/icons/java/java-original.svg',
-            '/Liquibase.svg',
-        ],
-        category: 'innovis',
-        year: '2025',
-        img: '/school-projects/dependencyOverviewDiagram.png',
-    },
-    {
-        id: 3,
-        title: t('projects.project3.title'),
-        des: t('projects.project3.des'),
-        iconLists: [
-            '/icons/python/python-original.svg',
-            '/icons/java/java-original.svg',
-            '/Mermaid.svg',
-        ],
-        link: 'https://github.com/ansinko/java_dependency_gen_tool',
-        category: 'innovis',
-        year: '2025',
-        img: '/school-projects/edocumentsDepDiagramExample.png',
-    },
-    {
-        id: 4,
-        title: t('projects.project4.title'),
-        des: t('projects.project4.des'),
-        iconLists: [
-            '/icons/html5/html5-original.svg',
-            'csv-svgrepo-com.svg',
-            'xml-svgrepo-com.svg',
-            '/icons/json/json-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/modern-data-formats',
-        category: 'BI-MDF',
-        year: '2022',
-        img: '/school-projects/json-code-example.png',
-    },
-    {
-        id: 5,
-        title: t('projects.project5.title'),
-        des: t('projects.project5.des'),
-        iconLists: [
-            '/icons/python/python-original.svg',
-            '/icons/mongodb/mongodb-original.svg',
-            '/icons/elasticsearch/elasticsearch-original.svg',
-            '/icons/kibana/kibana-original.svg',
-            '/icons/json/json-original.svg',
-            '/icons/docker/docker-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/big-data',
-        category: 'BI-BIG',
-        year: '2024',
-        img: '/school-projects/bigdata-overview.png',
-    },
-    {
-        id: 6,
-        title: t('projects.project6.title'),
-        des: t('projects.project6.des'),
-        iconLists: [
-            '/icons/html5/html5-original.svg',
-            '/icons/css3/css3-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/my-first-web',
-        category: 'BI-ZWU',
-        year: '2023',
-        img: '/school-projects/about-me-web.png',
-    },
-    {
-        id: 7,
-        title: t('projects.project7.title'),
-        des: t('projects.project7.des'),
-        iconLists: [
-            '/icons/java/java-original.svg',
-            '/icons/git/git-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/java-drake-game',
-        category: 'BI-PJV',
-        year: '2023',
-        img: '/school-projects/drake.png',
-    },
-    {
-        id: 8,
-        title: t('projects.project8.title'),
-        des: t('projects.project8.des'),
-        iconLists: [
-            '/icons/php/php-original.svg',
-            '/icons/symfony/symfony-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/php',
-        category: 'BI-PHP',
-        year: '2024',
-        img: '/school-projects/php.png',
-    },
-    {
-        id: 9,
-        title: t('projects.project9.title'),
-        des: t('projects.project9.des'),
-        iconLists: [
-            '/icons/php/php-original.svg',
-            '/icons/symfony/symfony-original.svg',
-            '/icons/postgresql/postgresql-original.svg',
-            'icons/javascript/javascript-original.svg',
-            '/icons/react/react-original.svg',
-            '/icons/docker/docker-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/product-recommendation-app',
-        category: 'BI-VWM',
-        year: '2023',
-        img: '/school-projects/recommendation-app.png',
-    },
-    {
-        id: 10,
-        title: t('projects.project10.title'),
-        des: t('projects.project10.des'),
-        iconLists: [
-            '/icons/cplusplus/cplusplus-original.svg',
-            '/icons/c/c-original.svg',
-            '/icons/cmake/cmake-original.svg',
-            '/icons/clion/clion-original.svg',
-            '/icons/git/git-original.svg',
-        ],
-        link: 'https://github.com/fit-school-projects/goodgame-empire-mini',
-        category: 'BI-PA2',
-        year: '2023',
-        img: '/school-projects/goodgame-empire-mini.png',
-    },
-    {
-        id: 11,
-        title: t('projects.project11.title'),
-        des: t('projects.project11.des'),
-        iconLists: ['/icons/cplusplus/cplusplus-original.svg'],
-        link: 'https://github.com/fit-school-projects/Cpp',
-        category: 'BI-PA2',
-        year: '2023',
-        img: '/school-projects/cpp.png',
-    },
-    {
-        id: 12,
-        title: t('projects.project12.title'),
-        des: t('projects.project12.des'),
-        iconLists: ['/icons/c/c-original.svg'],
-        link: 'https://github.com/fit-school-projects/C',
-        category: 'BI-PA1',
-        year: '2021',
-        img: '/school-projects/c.png',
-    },
-];
+interface SchoolWorkItem {
+    id: number;
+    title: string;
+    des: string;
+    iconLists: string[];
+    link?: string;
+    demo?: string;
+    category: string;
+    year: string;
+    img: string;
+    archived?: boolean;
+}
 
-export const programmingLanguages = (t: (key: string) => string) => [
-    {
-        name: ['Angular'],
-        icon: ['/icons/angular/angular-original.svg'],
-        proficiency: 60,
-        experience: '2+ ' + t('generic.yearsPlural'),
-        skillLevel: t('generic.intermediate'),
-        description: t('programmingLanguagesSection.frontend'),
-    },
-    {
-        name: ['Java'],
-        icon: ['/icons/java/java-original.svg'],
-        proficiency: 80,
-        experience: '2+ ' + t('generic.yearsPlural'),
-        skillLevel: t('generic.advanced'),
-        description: t('programmingLanguagesSection.backendMicroservices'),
-    },
-    {
-        name: ['PostgreSQL', 'MySQL'],
-        icon: [
-            '/icons/postgresql/postgresql-original.svg',
-            '/icons/mysql/mysql-original.svg',
-            '/Liquibase.svg',
-        ],
-        proficiency: 80,
-        experience: '2+ ' + t('generic.yearsPlural'),
-        skillLevel: t('generic.advanced'),
-        description: t('programmingLanguagesSection.persistence'),
-    },
-    {
-        name: ['Python', 'Node.js'],
-        icon: [
-            '/icons/python/python-original.svg',
-            '/icons/nodejs/nodejs-original.svg',
-        ],
-        proficiency: 45,
-        skillLevel: t('generic.intermediate'),
-        description: t('programmingLanguagesSection.scripting'),
-    },
-    {
-        name: ['React', 'Next.js'],
-        icon: [
-            '/icons/react/react-original.svg',
-            '/icons/nextjs/nextjs-original.svg',
-        ],
-        proficiency: 45,
-        skillLevel: t('generic.intermediate'),
-        description: t('programmingLanguagesSection.dynamic'),
-    },
-    {
-        name: ['JavaScript', 'TypeScript'],
-        icon: [
-            '/icons/javascript/javascript-original.svg',
-            '/icons/typescript/typescript-original.svg',
-        ],
-        proficiency: 80,
-        skillLevel: t('generic.advanced'),
-        description: t('programmingLanguagesSection.frontend'),
-    },
-    {
-        name: ['C++', 'C'],
-        icon: [
-            '/icons/cplusplus/cplusplus-original.svg',
-            '/icons/c/c-original.svg',
-        ],
-        proficiency: 35,
-        skillLevel: t('generic.intermediate'),
-        description: t('programmingLanguagesSection.backend'),
-    },
-    {
-        name: ['PHP'],
-        icon: ['/icons/php/php-original.svg'],
-        proficiency: 20,
-        skillLevel: t('generic.beginner'),
-        description: t('programmingLanguagesSection.backend'),
-    },
-    {
-        name: ['HTML', 'CSS'],
-        icon: [
-            '/icons/html5/html5-original.svg',
-            '/icons/css3/css3-original.svg',
-        ],
-        proficiency: 80,
-        skillLevel: t('generic.advanced'),
-        description: t('programmingLanguagesSection.static'),
-    },
-    {
-        name: ['Docker'],
-        icon: ['/icons/docker/docker-original.svg'],
-        proficiency: 55,
-        skillLevel: t('generic.intermediate'),
-        description: t('programmingLanguagesSection.containerization'),
-    },
-    {
-        name: ['Git', 'Jira'],
-        icon: ['/icons/git/git-original.svg', '/icons/jira/jira-original.svg'],
-        proficiency: 80,
-        experience: '2+ ' + t('generic.yearsPlural'),
-        skillLevel: t('generic.advanced'),
-        description: t('programmingLanguagesSection.versionControl'),
-    },
-    {
-        name: ['MongoDB'],
-        icon: ['/icons/mongodb/mongodb-original.svg'],
-        proficiency: 20,
-        skillLevel: t('generic.beginner'),
-        description: t('programmingLanguagesSection.nosql'),
-    },
-];
+export const schoolWork = (t: T): SchoolWorkItem[] => {
+    const items: SchoolWorkItem[] = [
+        {
+            id: 1,
+            title: t('projects.project1.title'),
+            des: t('projects.project1.des'),
+            iconLists: [
+                '/icons/php/php-original.svg',
+                '/icons/symfony/symfony-original.svg',
+                '/icons/javascript/javascript-original.svg',
+                '/icons/postgresql/postgresql-original.svg',
+                '/icons/docker/docker-original.svg',
+                '/icons/postman/postman-original.svg',
+                '/icons/git/git-original.svg',
+            ],
+            link: 'https://github.com/fit-school-projects/room-reservations-app',
+            category: 'BI-TWA',
+            year: '2023',
+            img: '/school-projects/reservations-app.png',
+        },
+        {
+            id: 2,
+            title: t('projects.project2.title'),
+            des: t('projects.project2.des'),
+            iconLists: [
+                '/icons/angular/angular-original.svg',
+                '/icons/java/java-original.svg',
+                '/Liquibase.svg',
+            ],
+            category: 'innovis',
+            year: '2025',
+            img: '/school-projects/dependencyOverviewDiagram.png',
+        },
+        {
+            id: 3,
+            title: t('projects.project3.title'),
+            des: t('projects.project3.des'),
+            iconLists: [
+                '/icons/python/python-original.svg',
+                '/icons/java/java-original.svg',
+                '/Mermaid.svg',
+            ],
+            link: 'https://github.com/ansinko/java_dependency_gen_tool',
+            category: 'innovis',
+            year: '2025',
+            img: '/school-projects/edocumentsDepDiagramExample.png',
+            archived: true,
+        },
+        {
+            id: 4,
+            title: t('projects.project4.title'),
+            des: t('projects.project4.des'),
+            iconLists: [
+                '/icons/html5/html5-original.svg',
+                '/csv-svgrepo-com.svg',
+                '/xml-svgrepo-com.svg',
+                '/icons/json/json-original.svg',
+            ],
+            link: 'https://github.com/fit-school-projects/modern-data-formats',
+            category: 'BI-MDF',
+            year: '2022',
+            img: '/school-projects/json-code-example.png',
+            archived: true,
+        },
+        {
+            id: 5,
+            title: t('projects.project5.title'),
+            des: t('projects.project5.des'),
+            iconLists: [
+                '/icons/python/python-original.svg',
+                '/icons/mongodb/mongodb-original.svg',
+                '/icons/elasticsearch/elasticsearch-original.svg',
+                '/icons/kibana/kibana-original.svg',
+                '/icons/json/json-original.svg',
+                '/icons/docker/docker-original.svg',
+            ],
+            link: 'https://github.com/fit-school-projects/big-data',
+            category: 'BI-BIG',
+            year: '2024',
+            img: '/school-projects/bigdata-overview.png',
+        },
+        {
+            id: 6,
+            title: t('projects.project6.title'),
+            des: t('projects.project6.des'),
+            iconLists: [
+                '/icons/html5/html5-original.svg',
+                '/icons/css3/css3-original.svg',
+            ],
+            link: 'https://github.com/fit-school-projects/my-first-web',
+            category: 'BI-ZWU',
+            year: '2023',
+            img: '/school-projects/about-me-web.png',
+        },
+        {
+            id: 7,
+            title: t('projects.project7.title'),
+            des: t('projects.project7.des'),
+            iconLists: [
+                '/icons/java/java-original.svg',
+                '/icons/git/git-original.svg',
+            ],
+            link: 'https://github.com/fit-school-projects/java-drake-game',
+            category: 'BI-PJV',
+            year: '2023',
+            img: '/school-projects/drake.png',
+            archived: true,
+        },
+        {
+            id: 8,
+            title: t('projects.project8.title'),
+            des: t('projects.project8.des'),
+            iconLists: [
+                '/icons/php/php-original.svg',
+                '/icons/symfony/symfony-original.svg',
+            ],
+            link: 'https://github.com/fit-school-projects/php',
+            category: 'BI-PHP',
+            year: '2024',
+            img: '/school-projects/php.png',
+            archived: true,
+        },
+        {
+            id: 9,
+            title: t('projects.project9.title'),
+            des: t('projects.project9.des'),
+            iconLists: [
+                '/icons/php/php-original.svg',
+                '/icons/symfony/symfony-original.svg',
+                '/icons/postgresql/postgresql-original.svg',
+                '/icons/javascript/javascript-original.svg',
+                '/icons/react/react-original.svg',
+                '/icons/docker/docker-original.svg',
+            ],
+            link: 'https://github.com/fit-school-projects/product-recommendation-app',
+            category: 'BI-VWM',
+            year: '2023',
+            img: '/school-projects/recommendation-app.png',
+        },
+        {
+            id: 10,
+            title: t('projects.project10.title'),
+            des: t('projects.project10.des'),
+            iconLists: [
+                '/icons/cplusplus/cplusplus-original.svg',
+                '/icons/c/c-original.svg',
+                '/icons/cmake/cmake-original.svg',
+                '/icons/clion/clion-original.svg',
+                '/icons/git/git-original.svg',
+            ],
+            link: 'https://github.com/fit-school-projects/goodgame-empire-mini',
+            category: 'BI-PA2',
+            year: '2023',
+            img: '/school-projects/goodgame-empire-mini.png',
+            archived: true,
+        },
+        {
+            id: 11,
+            title: t('projects.project11.title'),
+            des: t('projects.project11.des'),
+            iconLists: ['/icons/cplusplus/cplusplus-original.svg'],
+            link: 'https://github.com/fit-school-projects/Cpp',
+            category: 'BI-PA2',
+            year: '2023',
+            img: '/school-projects/cpp.png',
+            archived: true,
+        },
+        {
+            id: 12,
+            title: t('projects.project12.title'),
+            des: t('projects.project12.des'),
+            iconLists: ['/icons/c/c-original.svg'],
+            link: 'https://github.com/fit-school-projects/C',
+            category: 'BI-PA1',
+            year: '2021',
+            img: '/school-projects/c.png',
+            archived: true,
+        },
+        {
+            id: 13,
+            title: t('projects.project13.title'),
+            des: t('projects.project13.des'),
+            iconLists: [
+                '/icons/nextjs/nextjs-original.svg',
+                '/icons/react/react-original.svg',
+                '/icons/typescript/typescript-original.svg',
+                '/icons/css3/css3-original.svg',
+                '/icons/git/git-original.svg',
+            ],
+            link: 'https://github.com/ansinko/prague-office-menu-app',
+            demo: 'https://menu-picker-three.vercel.app/',
+            category: 'side-project',
+            year: '2025',
+            img: '/school-projects/prague-office-menu.png',
+        },
+    ];
+
+    return items.sort((a, b) => Number(b.year) - Number(a.year));
+};
+
+interface ProgLang {
+    name: string[];
+    icon: string[];
+    proficiency: number;
+    experience?: string;
+    skillLevel: string;
+    description: string;
+}
+
+export const programmingLanguages = (t: T): ProgLang[] => {
+    const years = (n: number) => `${n}+ ${t('generic.yearsPlural')}`;
+
+    const langs: ProgLang[] = [
+        {
+            name: ['Java'],
+            icon: ['/icons/java/java-original.svg'],
+            proficiency: 80,
+            experience: years(2),
+            skillLevel: t('generic.advanced'),
+            description: t('programmingLanguagesSection.backendMicroservices'),
+        },
+        {
+            name: ['JavaScript', 'TypeScript'],
+            icon: [
+                '/icons/javascript/javascript-original.svg',
+                '/icons/typescript/typescript-original.svg',
+            ],
+            proficiency: 80,
+            experience: years(3),
+            skillLevel: t('generic.advanced'),
+            description: t('programmingLanguagesSection.frontend'),
+        },
+        {
+            name: ['PostgreSQL', 'MySQL'],
+            icon: [
+                '/icons/postgresql/postgresql-original.svg',
+                '/icons/mysql/mysql-original.svg',
+                '/Liquibase.svg',
+            ],
+            proficiency: 80,
+            experience: years(2),
+            skillLevel: t('generic.advanced'),
+            description: t('programmingLanguagesSection.persistence'),
+        },
+        {
+            name: ['Git', 'Jira'],
+            icon: ['/icons/git/git-original.svg', '/icons/jira/jira-original.svg'],
+            proficiency: 80,
+            experience: years(2),
+            skillLevel: t('generic.advanced'),
+            description: t('programmingLanguagesSection.versionControl'),
+        },
+        {
+            name: ['HTML', 'CSS'],
+            icon: [
+                '/icons/html5/html5-original.svg',
+                '/icons/css3/css3-original.svg',
+            ],
+            proficiency: 80,
+            experience: years(3),
+            skillLevel: t('generic.advanced'),
+            description: t('programmingLanguagesSection.static'),
+        },
+        {
+            name: ['Angular'],
+            icon: ['/icons/angular/angular-original.svg'],
+            proficiency: 60,
+            experience: years(2),
+            skillLevel: t('generic.intermediate'),
+            description: t('programmingLanguagesSection.frontend'),
+        },
+        {
+            name: ['Docker'],
+            icon: ['/icons/docker/docker-original.svg'],
+            proficiency: 55,
+            experience: years(1),
+            skillLevel: t('generic.intermediate'),
+            description: t('programmingLanguagesSection.containerization'),
+        },
+        {
+            name: ['React', 'Next.js'],
+            icon: [
+                '/icons/react/react-original.svg',
+                '/icons/nextjs/nextjs-original.svg',
+            ],
+            proficiency: 45,
+            experience: years(1),
+            skillLevel: t('generic.intermediate'),
+            description: t('programmingLanguagesSection.dynamic'),
+        },
+        {
+            name: ['Python', 'Node.js'],
+            icon: [
+                '/icons/python/python-original.svg',
+                '/icons/nodejs/nodejs-original.svg',
+            ],
+            proficiency: 45,
+            experience: years(1),
+            skillLevel: t('generic.intermediate'),
+            description: t('programmingLanguagesSection.scripting'),
+        },
+        {
+            name: ['C++', 'C'],
+            icon: [
+                '/icons/cplusplus/cplusplus-original.svg',
+                '/icons/c/c-original.svg',
+            ],
+            proficiency: 35,
+            experience: years(1),
+            skillLevel: t('generic.intermediate'),
+            description: t('programmingLanguagesSection.backend'),
+        },
+        {
+            name: ['PHP'],
+            icon: ['/icons/php/php-original.svg'],
+            proficiency: 20,
+            experience: years(1),
+            skillLevel: t('generic.beginner'),
+            description: t('programmingLanguagesSection.backend'),
+        },
+        {
+            name: ['MongoDB'],
+            icon: ['/icons/mongodb/mongodb-original.svg'],
+            proficiency: 20,
+            skillLevel: t('generic.beginner'),
+            description: t('programmingLanguagesSection.nosql'),
+        },
+    ];
+
+    return langs;
+};
 
 export const socialMedia = [
     {
@@ -400,14 +453,14 @@ export const socialMedia = [
     },
     {
         id: 2,
-        img: '/facebook.svg',
-        link: 'https://www.facebook.com/andrej.meliska',
-        name: 'Facebook',
+        img: '/link.svg',
+        link: 'https://www.linkedin.com/in/andrej-meli%C5%A1ka-15278026b/',
+        name: 'LinkedIn',
     },
     {
         id: 3,
-        img: '/link.svg',
-        link: 'https://www.linkedin.com/in/andrej-meliska-15278026b/',
-        name: 'LinkedIn',
+        img: '/facebook.svg',
+        link: 'https://www.facebook.com/andrej.meliska',
+        name: 'Facebook',
     },
 ];
