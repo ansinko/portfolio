@@ -5,6 +5,7 @@ import Grid from '@/components/Grid';
 import Hero from '@/components/Hero';
 import ProgrammingLanguages from '@/components/ProgrammingLanguages';
 import SchoolWork from '@/components/SchoolWork';
+import Steward from '@/components/Steward';
 import { FloatingNav } from '@/components/ui/FloatingNav';
 import { getNavItems } from '@/data';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -22,6 +23,7 @@ export default function Home() {
                 <Hero />
                 <Grid />
                 <SchoolWork />
+                <Steward />
                 <ProgrammingLanguages />
                 <Footer />
             </div>

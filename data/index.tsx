@@ -3,6 +3,7 @@ import {
     FaDiagramProject,
     FaGraduationCap,
     FaEnvelope,
+    FaWandMagicSparkles,
 } from 'react-icons/fa6';
 import type { T } from './translations';
 
@@ -12,6 +13,11 @@ export const getNavItems = (t: T) => [
         name: t('navigation.projects'),
         link: '#projects',
         icon: <FaDiagramProject />,
+    },
+    {
+        name: t('navigation.steward'),
+        link: '#steward',
+        icon: <FaWandMagicSparkles />,
     },
     {
         name: t('navigation.skills'),

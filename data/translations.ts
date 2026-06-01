@@ -19,12 +19,13 @@ export const translations = {
             title: 'Andrej Meliška — Software Developer',
             subtitle: 'Bc. by paper, Dev. by passion',
             description:
-                'Software developer, sports enthusiast and student @ FIT CTU in Prague who brings ideas to life with code ✨',
+                'Software developer, sports enthusiast and FIT CTU graduate in Prague who brings ideas to life with code ✨',
             button: 'See my projects',
         },
         navigation: {
             about: 'About',
             projects: 'Projects',
+            steward: 'Steward',
             skills: 'Skills',
             contact: 'Contact',
         },
@@ -73,7 +74,7 @@ export const translations = {
             },
             domain: {
                 description:
-                    'I love automating workflows and writing scripts in Python and Node.js to boost productivity and eliminate repetitive manual tasks.',
+                    "Actively exploring AI, vibe coding and modern dev workflows — and shipping my own SaaS and side projects on the side.",
             },
             linkedin: {
                 title: 'Connect with me on LinkedIn',
@@ -85,6 +86,54 @@ export const translations = {
             archiveShow: 'Show older projects',
             archiveHide: 'Hide older projects',
             archiveHint: 'Early coursework from my first years at FIT',
+        },
+        steward: {
+            tag: 'Currently building',
+            title: '<span class="text-purple">Steward</span> — my personal OS',
+            tagline:
+                "What started as an Excel expense tracker is becoming my personal operating system — finance, habits, daily reflection, sport, Bible reading, calendar and integrations, all in one place.",
+            aiCalloutTitle: 'AI-driven workflow',
+            aiCalloutBody:
+                'Built solo with Claude Code as my pair-programmer — every feature shipped, every bug squashed, every refactor reviewed together. A real playground for vibe coding and modern AI dev workflows.',
+            featuresTitle: 'What it does today',
+            stackTitle: 'Built with',
+            galleryTitle: 'See the app up close',
+            galleryHint: 'Click any screen to open',
+            galleryClose: 'Close',
+            galleryPrev: 'Previous',
+            galleryNext: 'Next',
+            comingSoon: 'Deploy coming soon',
+            githubButton: 'Source on GitHub',
+            screens: {
+                dashboard: 'Main dashboard',
+                finance: 'Finance dashboard',
+                habits: 'Daily habits',
+                sport: 'Sport · Strava sync',
+                spotify: 'Spotify stats',
+                nhl: 'NHL tracker',
+                dashboardCompact: 'Dashboard widgets',
+            },
+            stats: {
+                modules: 'Modules',
+                solo: 'Solo build',
+                ai: 'AI-paired',
+                daily: 'Daily driver',
+            },
+            features: {
+                dashboard:
+                    'Unified daily dashboard — cash flow, habits, today\'s calendar, sport and Bible reading at a glance',
+                finance:
+                    'Full finance suite — expenses, income, accounts, per-category budgets, monthly planner, Slovak SZČO tax calculator, documents',
+                habits:
+                    'Habits + daily check-in (mood / energy / stress / focus) + monthly review and history',
+                sport:
+                    'Sport with Strava sync — weekly goals, 8-week trend, activity heatmap, pace and heart-rate stats',
+                bible:
+                    'Bible reading plan with morning & evening devotional and daily verse',
+                integrations:
+                    'Side widgets — Spotify listening stats, NHL team tracker, Prague public transit (PID) departures, travel & calendar',
+                auth: 'Multi-user — Better Auth with Google OAuth and email/password, every record scoped to its owner',
+            },
         },
         programmingLanguages: {
             title: '<span class="text-purple">Programming Languages</span> and Skills',
@@ -194,12 +243,13 @@ export const translations = {
             title: 'Andrej Meliška — Softvérový vývojár',
             subtitle: 'Bc. na papieri, Dev. z vášne',
             description:
-                'Softvérový vývojár, športový nadšenec a študent @ FIT ČVUT v Prahe, ktorý privádza nápady k životu pomocou kódu ✨',
+                'Softvérový vývojár, športový nadšenec a absolvent FIT ČVUT v Prahe, ktorý privádza nápady k životu pomocou kódu ✨',
             button: 'Pozri moje projekty',
         },
         navigation: {
             about: 'O mne',
             projects: 'Projekty',
+            steward: 'Steward',
             skills: 'Zručnosti',
             contact: 'Kontakt',
         },
@@ -248,7 +298,7 @@ export const translations = {
             },
             domain: {
                 description:
-                    'Rád automatizujem pracovné postupy a píšem skripty v Pythone a Node.js, aby som zvýšil produktivitu a eliminoval opakované manuálne úlohy.',
+                    'Aktívne sa zaujímam o AI, vibe coding a moderné dev workflowy — popri tom si staviam vlastný SaaS a rôzne side projekty.',
             },
             linkedin: {
                 title: 'Spoj sa so mnou na LinkedIne',
@@ -260,6 +310,54 @@ export const translations = {
             archiveShow: 'Zobraziť staršie projekty',
             archiveHide: 'Skryť staršie projekty',
             archiveHint: 'Začiatky štúdia z prvých rokov na FIT',
+        },
+        steward: {
+            tag: 'Práve staviam',
+            title: '<span class="text-purple">Steward</span> — môj osobný OS',
+            tagline:
+                'Z pôvodného Excel trackera výdavkov sa rodí môj osobný operačný systém — financie, návyky, denná reflexia, šport, Biblia, kalendár a integrácie, všetko na jednom mieste.',
+            aiCalloutTitle: 'AI-driven workflow',
+            aiCalloutBody:
+                'Staviam sám s Claude Code ako pair-programmerom — každý nový feature, fix aj refactor riešený spolu. Reálne pieskovisko pre vibe coding a moderné AI dev workflowy.',
+            featuresTitle: 'Čo už vie',
+            stackTitle: 'Postavené na',
+            galleryTitle: 'Pozri si aplikáciu zblízka',
+            galleryHint: 'Klikni na ľubovoľnú obrazovku pre otvorenie',
+            galleryClose: 'Zavrieť',
+            galleryPrev: 'Predchádzajúci',
+            galleryNext: 'Ďalší',
+            comingSoon: 'Nasadenie čoskoro',
+            githubButton: 'Zdrojový kód na GitHube',
+            screens: {
+                dashboard: 'Hlavný dashboard',
+                finance: 'Finančný dashboard',
+                habits: 'Návyky',
+                sport: 'Šport · Strava',
+                spotify: 'Spotify štatistiky',
+                nhl: 'NHL tracker',
+                dashboardCompact: 'Dashboard widgety',
+            },
+            stats: {
+                modules: 'Modulov',
+                solo: 'Solo build',
+                ai: 'AI pair-programmed',
+                daily: 'Daily driver',
+            },
+            features: {
+                dashboard:
+                    'Denný dashboard — cashflow, návyky, dnešný kalendár, šport a Biblia na jeden pohľad',
+                finance:
+                    'Kompletný finančný modul — výdavky, príjmy, účty, rozpočet podľa kategórií, mesačný plánovač, kalkulačka dane pre SZČO, dokumenty',
+                habits:
+                    'Návyky + denný check-in (nálada / energia / stres / focus) + mesačné review a história',
+                sport:
+                    'Šport so Strava synchronizáciou — týždenné ciele, 8-týždňový trend, heatmapa aktivity, tempo a tep',
+                bible:
+                    'Biblický čítací plán s ranným a večerným devotionalom a denným veršom',
+                integrations:
+                    'Vedľajšie widgety — Spotify listening štatistiky, NHL tracker, PID odjazdy v Prahe, kalendár a cestovanie',
+                auth: 'Multi-user — Better Auth s Google OAuth aj email/heslom, každý záznam viazaný na svojho vlastníka',
+            },
         },
         programmingLanguages: {
             title: '<span class="text-purple">Programovacie jazyky</span> a zručnosti',

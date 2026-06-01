@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         template: '%s | Andrej Meliška',
     },
     description:
-        'Portfolio of Andrej Meliška — Software Developer and FIT CTU student building backends, microservices, and web apps in Java, TypeScript, and beyond.',
+        'Portfolio of Andrej Meliška — Software Developer and FIT CTU graduate building backends, microservices, and web apps in Java, TypeScript, and beyond.',
     keywords: [
         'Andrej Meliška',
         'Software Developer',
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
         type: 'website',
         title: 'Andrej Meliška — Software Developer',
         description:
-            'Software developer and FIT CTU student bringing ideas to life with code.',
+            'Software developer and FIT CTU graduate bringing ideas to life with code.',
         images: ['/icons/icons8-portfolio-16.png'],
     },
     twitter: {
         card: 'summary',
         title: 'Andrej Meliška — Software Developer',
         description:
-            'Software developer and FIT CTU student bringing ideas to life with code.',
+            'Software developer and FIT CTU graduate bringing ideas to life with code.',
     },
 };
 
