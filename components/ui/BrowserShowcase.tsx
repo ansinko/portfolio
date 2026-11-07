@@ -22,7 +22,7 @@ const BrowserShowcase = ({
     slides,
     onSlideClick,
     autoIntervalMs = 4000,
-    domain = 'steward.app',
+    domain = 'steward.ixy.sk',
     className,
 }: Props) => {
     const [active, setActive] = useState(0);

@@ -88,10 +88,10 @@ export const translations = {
             archiveHint: 'Early coursework from my first years at FIT',
         },
         steward: {
-            tag: 'Currently building',
+            tag: 'Live · in beta',
             title: '<span class="text-purple">Steward</span> — my personal OS',
             tagline:
-                "What started as an Excel expense tracker is becoming my personal operating system — finance, habits, daily reflection, sport, Bible reading, calendar and integrations, all in one place.",
+                'What started as an Excel expense tracker is now my personal operating system, running daily at steward.ixy.sk — finance and Slovak taxes, habits, health and sport straight from a Garmin watch, AI sleep insights and Bible reading, all in one place.',
             aiCalloutTitle: 'AI-driven workflow',
             aiCalloutBody:
                 'Built solo with Claude Code as my pair-programmer — every feature shipped, every bug squashed, every refactor reviewed together. A real playground for vibe coding and modern AI dev workflows.',
@@ -102,16 +102,19 @@ export const translations = {
             galleryClose: 'Close',
             galleryPrev: 'Previous',
             galleryNext: 'Next',
-            comingSoon: 'Deploy coming soon',
-            githubButton: 'Source on GitHub',
+            liveBadge: 'Live with beta testers',
+            openButton: 'Open steward.ixy.sk',
             screens: {
-                dashboard: 'Main dashboard',
-                finance: 'Finance dashboard',
-                habits: 'Daily habits',
-                sport: 'Sport · Strava sync',
-                spotify: 'Spotify stats',
-                nhl: 'NHL tracker',
-                dashboardCompact: 'Dashboard widgets',
+                dashboard: 'Dashboard',
+                finance: 'Finance',
+                budget: 'Monthly budget',
+                planner: 'Monthly planner',
+                taxes: 'Taxes & levies',
+                habits: 'Habits',
+                health: 'Health · Garmin',
+                sport: 'Sport · Garmin',
+                review: 'Check-in review',
+                word: 'Bible reading plan',
             },
             stats: {
                 modules: 'Modules',
@@ -121,18 +124,23 @@ export const translations = {
             },
             features: {
                 dashboard:
-                    'Unified daily dashboard — cash flow, habits, today\'s calendar, sport and Bible reading at a glance',
+                    'Customisable dashboard — pick your widgets: cash flow, check-in, habits, sleep, body battery, sport, trips and the daily verse',
                 finance:
-                    'Full finance suite — expenses, income, accounts, per-category budgets, monthly planner, Slovak SZČO tax calculator, documents',
+                    'Finance — expenses, income, accounts and budgets, CZK → EUR at the rate of the expense date, eKasa receipts from a QR code, invoices',
+                taxes:
+                    'Monthly planner of fixed payments that never rewrites past months, plus a Slovak sole-trader (SZČO) tax and health / social insurance calculator',
                 habits:
-                    'Habits + daily check-in (mood / energy / stress / focus) + monthly review and history',
+                    'Habits with streaks, daily check-in (mood / energy / stress / focus) and a weekly-to-quarterly review',
+                health:
+                    'Health from a Garmin watch — sleep stages and score, body battery, HRV, resting heart rate, steps and stress',
                 sport:
-                    'Sport with Strava sync — weekly goals, 8-week trend, activity heatmap, pace and heart-rate stats',
-                bible:
-                    'Bible reading plan with morning & evening devotional and daily verse',
+                    'Sport synced from Garmin — weekly and monthly totals, 12-week trend, breakdown by activity; habits like "run" tick themselves after a workout',
+                insights:
+                    'AI insights on what drives my sleep — bedtime, training, steps, stress and the gap between the last meal and sleep',
+                bible: 'Bible reading plans, Spurgeon\'s Morning & Evening devotional and a daily verse',
                 integrations:
-                    'Side widgets — Spotify listening stats, NHL team tracker, Prague public transit (PID) departures, travel & calendar',
-                auth: 'Multi-user — Better Auth with Google OAuth and email/password, every record scoped to its owner',
+                    'MCP server so Claude can read and log my data, plus Google Calendar, Spotify, NHL and Prague transit widgets',
+                auth: 'Multi-user and mobile-ready — Google or email sign-in, onboarding for new testers and an in-app "report a problem" button',
             },
         },
         programmingLanguages: {
@@ -312,10 +320,10 @@ export const translations = {
             archiveHint: 'Začiatky štúdia z prvých rokov na FIT',
         },
         steward: {
-            tag: 'Práve staviam',
+            tag: 'Beží naživo · beta',
             title: '<span class="text-purple">Steward</span> — môj osobný OS',
             tagline:
-                'Z pôvodného Excel trackera výdavkov sa rodí môj osobný operačný systém — financie, návyky, denná reflexia, šport, Biblia, kalendár a integrácie, všetko na jednom mieste.',
+                'Z pôvodného Excel trackera výdavkov je dnes môj osobný operačný systém, ktorý denne beží na steward.ixy.sk — financie a dane, návyky, zdravie a šport priamo z Garmin hodiniek, AI insighty o spánku a Biblia, všetko na jednom mieste.',
             aiCalloutTitle: 'AI-driven workflow',
             aiCalloutBody:
                 'Staviam sám s Claude Code ako pair-programmerom — každý nový feature, fix aj refactor riešený spolu. Reálne pieskovisko pre vibe coding a moderné AI dev workflowy.',
@@ -326,16 +334,19 @@ export const translations = {
             galleryClose: 'Zavrieť',
             galleryPrev: 'Predchádzajúci',
             galleryNext: 'Ďalší',
-            comingSoon: 'Nasadenie čoskoro',
-            githubButton: 'Zdrojový kód na GitHube',
+            liveBadge: 'Naživo s beta testermi',
+            openButton: 'Otvoriť steward.ixy.sk',
             screens: {
-                dashboard: 'Hlavný dashboard',
-                finance: 'Finančný dashboard',
+                dashboard: 'Dashboard',
+                finance: 'Financie',
+                budget: 'Mesačný budget',
+                planner: 'Mesačný plánovač',
+                taxes: 'Dane a odvody',
                 habits: 'Návyky',
-                sport: 'Šport · Strava',
-                spotify: 'Spotify štatistiky',
-                nhl: 'NHL tracker',
-                dashboardCompact: 'Dashboard widgety',
+                health: 'Zdravie · Garmin',
+                sport: 'Šport · Garmin',
+                review: 'Review check-inov',
+                word: 'Biblický plán',
             },
             stats: {
                 modules: 'Modulov',
@@ -345,18 +356,23 @@ export const translations = {
             },
             features: {
                 dashboard:
-                    'Denný dashboard — cashflow, návyky, dnešný kalendár, šport a Biblia na jeden pohľad',
+                    'Dashboard na mieru — vyberieš si widgety: cashflow, check-in, návyky, spánok, body battery, šport, cesty a verš dňa',
                 finance:
-                    'Kompletný finančný modul — výdavky, príjmy, účty, rozpočet podľa kategórií, mesačný plánovač, kalkulačka dane pre SZČO, dokumenty',
+                    'Financie — výdavky, príjmy, účty a budget, koruny prepočítané kurzom ku dňu výdavku, bločky z eKasy cez QR, faktúry',
+                taxes:
+                    'Mesačný plánovač povinných platieb, ktorý neprepisuje históriu, a kalkulačka dane, zdravotného a sociálneho poistenia pre SZČO',
                 habits:
-                    'Návyky + denný check-in (nálada / energia / stres / focus) + mesačné review a história',
+                    'Návyky so streakmi, denný check-in (nálada / energia / stres / focus) a review za týždeň až štvrťrok',
+                health:
+                    'Zdravie z Garmin hodiniek — fázy a skóre spánku, body battery, HRV, pokojový tep, kroky a stres',
                 sport:
-                    'Šport so Strava synchronizáciou — týždenné ciele, 8-týždňový trend, heatmapa aktivity, tempo a tep',
-                bible:
-                    'Biblický čítací plán s ranným a večerným devotionalom a denným veršom',
+                    'Šport z Garminu — týždeň a mesiac, 12-týždňový trend, rozpad podľa druhu; návyk „beh“ sa po tréningu odškrtne sám',
+                insights:
+                    'AI insighty o tom, čo ovplyvňuje môj spánok — čas zaspatia, tréning, kroky, stres a odstup posledného jedla',
+                bible: 'Biblické čítacie plány, Spurgeonov ranný a večerný devotional a verš dňa',
                 integrations:
-                    'Vedľajšie widgety — Spotify listening štatistiky, NHL tracker, PID odjazdy v Prahe, kalendár a cestovanie',
-                auth: 'Multi-user — Better Auth s Google OAuth aj email/heslom, každý záznam viazaný na svojho vlastníka',
+                    'MCP server, cez ktorý Claude číta a zapisuje moje dáta, plus Google kalendár, Spotify, NHL a PID odjazdy',
+                auth: 'Multi-user a mobilná verzia — prihlásenie cez Google aj e-mail, onboarding pre testerov a tlačidlo „Nahlásiť problém“ priamo v appke',
             },
         },
         programmingLanguages: {
