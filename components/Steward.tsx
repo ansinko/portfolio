@@ -4,14 +4,17 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'motion/react';
 import {
-    FaGithub,
+    FaArrowUpRightFromSquare,
     FaChartLine,
     FaWallet,
+    FaFileInvoiceDollar,
     FaListCheck,
+    FaHeartPulse,
     FaPersonRunning,
+    FaLightbulb,
     FaBookBible,
     FaPlug,
-    FaLock,
+    FaUsers,
     FaWandMagicSparkles,
     FaChevronLeft,
     FaChevronRight,
@@ -24,16 +27,19 @@ import BrowserShowcase, {
     type ShowcaseSlide,
 } from './ui/BrowserShowcase';
 
-const STEWARD_REPO = 'https://github.com/ansinko/expense-tracker';
+const STEWARD_URL = 'https://steward.ixy.sk';
 
 const FEATURES: { key: string; Icon: IconType }[] = [
     { key: 'dashboard', Icon: FaChartLine },
     { key: 'finance', Icon: FaWallet },
+    { key: 'taxes', Icon: FaFileInvoiceDollar },
     { key: 'habits', Icon: FaListCheck },
+    { key: 'health', Icon: FaHeartPulse },
     { key: 'sport', Icon: FaPersonRunning },
+    { key: 'insights', Icon: FaLightbulb },
     { key: 'bible', Icon: FaBookBible },
     { key: 'integrations', Icon: FaPlug },
-    { key: 'auth', Icon: FaLock },
+    { key: 'auth', Icon: FaUsers },
 ];
 
 interface Screen {
@@ -42,13 +48,16 @@ interface Screen {
 }
 
 const SCREENS: Screen[] = [
-    { src: '/steward/screenshot-1.png', labelKey: 'dashboard' },
-    { src: '/steward/screenshot-4.png', labelKey: 'sport' },
-    { src: '/steward/screenshot-3.png', labelKey: 'habits' },
-    { src: '/steward/screenshot-2.png', labelKey: 'finance' },
-    { src: '/steward/screenshot-5.png', labelKey: 'spotify' },
-    { src: '/steward/screenshot-6.png', labelKey: 'nhl' },
-    { src: '/steward/screenshot-7.png', labelKey: 'dashboardCompact' },
+    { src: '/steward/dashboard.png', labelKey: 'dashboard' },
+    { src: '/steward/finance.png', labelKey: 'finance' },
+    { src: '/steward/budget.png', labelKey: 'budget' },
+    { src: '/steward/planner.png', labelKey: 'planner' },
+    { src: '/steward/taxes.png', labelKey: 'taxes' },
+    { src: '/steward/habits.png', labelKey: 'habits' },
+    { src: '/steward/health.png', labelKey: 'health' },
+    { src: '/steward/sport.png', labelKey: 'sport' },
+    { src: '/steward/review.png', labelKey: 'review' },
+    { src: '/steward/word.png', labelKey: 'word' },
 ];
 
 const STACK = [
@@ -59,7 +68,8 @@ const STACK = [
     { name: 'Prisma 7', icon: null },
     { name: 'Better Auth', icon: null },
     { name: 'Recharts', icon: null },
-    { name: 'Docker', icon: '/icons/docker/docker-original.svg' },
+    { name: 'AI SDK', icon: null },
+    { name: 'Vercel', icon: null },
 ];
 
 const setNavVisibility = (visible: boolean) => {
@@ -150,7 +160,7 @@ const Steward = () => {
                     <BrowserShowcase
                         slides={slides}
                         onSlideClick={open}
-                        domain='steward.app'
+                        domain='steward.ixy.sk'
                     />
                     <p className='text-center text-white-100/50 text-xs mt-3'>
                         {t('steward.galleryHint')}
@@ -235,17 +245,17 @@ const Steward = () => {
 
                     <div className='flex flex-col sm:flex-row items-center gap-4 mt-10'>
                         <a
-                            href={STEWARD_REPO}
+                            href={STEWARD_URL}
                             target='_blank'
                             rel='noopener noreferrer'
                             className='inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-purple/20 hover:border-purple/30 hover:text-purple transition-all duration-200 font-medium'
                         >
-                            <FaGithub size={18} />
-                            {t('steward.githubButton')}
+                            <FaArrowUpRightFromSquare size={16} />
+                            {t('steward.openButton')}
                         </a>
-                        <span className='inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 text-sm font-medium'>
-                            <span className='w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse' />
-                            {t('steward.comingSoon')}
+                        <span className='inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-sm font-medium'>
+                            <span className='w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse' />
+                            {t('steward.liveBadge')}
                         </span>
                     </div>
                 </div>
